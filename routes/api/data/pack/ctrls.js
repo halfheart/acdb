@@ -8,7 +8,8 @@ exports.list = (req, res) => {
     limit,
     order,
     sort,
-    query
+    query,
+    select
   } = req.query;
 
   if (draw === undefined) res.send({ success: false, msg: 'params err draw' });
@@ -16,7 +17,8 @@ exports.list = (req, res) => {
   if (limit === undefined) res.send({ success: false, msg: 'params err limit' });
   if (order === undefined) res.send({ success: false, msg: 'params err order' });
   if (sort === undefined) res.send({ success: false, msg: 'params err sort' });
-  if (query === undefined) res.send({ success: false, msg: 'params err query' });
+  if (query === undefined) query = {};
+  if (select === undefined) select = '';
 
   skip = parseInt(skip);
   limit = parseInt(limit);
@@ -26,7 +28,7 @@ exports.list = (req, res) => {
   let d = {
     cnt: 0,
     draw: 0,
-    packs: []
+    ds: []
   };
 
   Pack.count(query)
@@ -37,10 +39,11 @@ exports.list = (req, res) => {
     return Pack.find(query)
       .skip(skip)
       .limit(limit)
-      .sort(s);
+      .sort(s)
+      .select(select);
   })
   .then((r) => {
-    d.packs = r
+    d.ds = r
     res.send({ success: true, d: d });
   })
   .catch((err) => {

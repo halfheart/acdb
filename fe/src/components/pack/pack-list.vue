@@ -2,7 +2,7 @@
   <div>
     <v-list>
       <v-list-tile
-      v-for="(i, index) in d.packs"
+      v-for="(i, index) in d.ds"
       :key="index"
       @click="">
         <v-list-tile-title>
@@ -30,7 +30,7 @@ export default {
   data () {
     return {
       p: {
-        page: 0,
+        page: 1,
         limit: 10,
         sort: 1,
         order: '_id'
@@ -38,7 +38,7 @@ export default {
       d: {
         cnt: 0,
         draw: 0,
-        packs: []
+        ds: []
       }
     }
   },
@@ -50,12 +50,13 @@ export default {
       return limit * (page - 1)
     }
   },
-  mounted () {
+  created () {
     this.list()
   },
   methods: {
     list () {
       const query = {}
+      const select = ''
       this.$axios.get(`${this.$cfg.path.api}data/pack`, {
         params: {
           draw: this.d.draw + 1,
@@ -63,7 +64,8 @@ export default {
           query: query,
           limit: this.p.limit,
           order: this.p.order,
-          sort: this.p.sort
+          sort: this.p.sort,
+          select: select
         }
       })
       .then((res) => {

@@ -6,7 +6,7 @@
       "subname":"",
       "img":"",
       "isUnique":true,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -18,12 +18,12 @@
       "xp":{
          "$numberInt":"0"
       },
-      "trait":[
+      "traits":[
          "Item",
          "Weapon",
          "Firearm"
       ],
-      "slot":[
+      "slots":[
          "Hand"
       ],
       "will":{
@@ -66,7 +66,7 @@
       "number":{
          "$numberInt":"6"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -80,7 +80,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -90,10 +90,10 @@
       "xp":{
          "$numberInt":"0"
       },
-      "trait":[
+      "traits":[
          "Task"
       ],
-      "slot":[
+      "slots":[
 
       ],
       "will":{
@@ -136,7 +136,7 @@
       "number":{
          "$numberInt":"7"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -150,7 +150,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -160,10 +160,10 @@
       "xp":{
          "$numberInt":"0"
       },
-      "trait":[
+      "traits":[
          "Task"
       ],
-      "slot":[
+      "slots":[
 
       ],
       "will":{
@@ -206,7 +206,7 @@
       "number":{
          "$numberInt":"11"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -220,7 +220,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -232,10 +232,10 @@
       "xp":{
          "$numberInt":"0"
       },
-      "trait":[
+      "traits":[
          "Tactic"
       ],
-      "slot":[
+      "slots":[
 
       ],
       "will":{
@@ -278,7 +278,7 @@
       "number":{
          "$numberInt":"10"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -292,7 +292,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -302,10 +302,10 @@
       "xp":{
          "$numberInt":"0"
       },
-      "trait":[
+      "traits":[
          "Madness"
       ],
-      "slot":[
+      "slots":[
 
       ],
       "will":{
@@ -348,7 +348,7 @@
       "number":{
          "$numberInt":"15"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -362,7 +362,7 @@
       "subname":"The Librarian",
       "img":"",
       "isUnique":true,
-      "doubleFaced":true,
+      "isDoubleFaced":true,
       "backName":"Daisy Walker",
       "backText":"Deck size: 30.\n\nDeckbuilding options: Seeker cards ([seeker]) level 0-5, Mystic cards ([mystic]) level 0-2, Neutral cards level 0-5.\n\nDeckbuilding requirements (do not count toward deck size): Daisy’s Tote Bag, The Necronomicon (John Dee Translation), 1 random basic weakness.",
       "backFlavor":"As a respected librarian at Miskatonic University, Daisy had always felt that books were the most important thing in her life. She explored in fiction what she abhorred in life: horror, violence, fear. Then, she stumbled across the John Dee translation of the Necronomicon. It was blasphemous, unholy, and too awful to be read. But given her studies in obscure and occult subjects, Daisy knew there was more truth than fiction within the book's pages. She began to wonder what other secrets the restricted collection of the Orne Library held...",
@@ -370,10 +370,10 @@
       "subtype":null,
       "cost":null,
       "xp":null,
-      "trait":[
+      "traits":[
          "Miskatonic"
       ],
-      "slot":[
+      "slots":[
 
       ],
       "will":{
@@ -421,7 +421,7 @@
       "number":{
          "$numberInt":"2"
       },
-      "deckOption":[
+      "deckOptions":[
          {
             "faction":"Neutral",
             "min":{
@@ -470,7 +470,7 @@
       "subname":"The Urchin",
       "img":"",
       "isUnique":true,
-      "doubleFaced":true,
+      "isDoubleFaced":true,
       "backName":"Wendy Adams",
       "backText":"Deck size: 30.\n\nDeckbuilding options: Survivor cards ([survivor]) level 0-5, Rogue cards ([rogue]) level 0-2, Neutral cards level 0-5.\n\nDeckbuilding requirements (do not count toward deck size): Wendy's Amulet, Abandoned and Alone, 1 random basic weakness.",
       "backFlavor":"Mama used to let Wendy play with her necklace when she was small. Mama would tell her stories, and Wendy would spin the necklace and watch as it glittered. Then, word came that her father had been lost at sea, and Mama started acting strange, drawing unusual symbols in chalk all over the house. They took Mama to the asylum, and Wendy went to the orphanage. Before they took her away, Mama gave her the necklace, to \"protect her.\" Wendy stayed in the orphanage for several years before running away, deciding that she could take better care of herself on her own.",
@@ -478,10 +478,10 @@
       "subtype":null,
       "cost":null,
       "xp":null,
-      "trait":[
+      "traits":[
          "Drifter"
       ],
-      "slot":[
+      "slots":[
 
       ],
       "will":{
@@ -529,7 +529,7 @@
       "number":{
          "$numberInt":"5"
       },
-      "deckOption":[
+      "deckOptions":[
          {
             "faction":"Neutral",
             "min":{
@@ -578,7 +578,7 @@
       "subname":"",
       "img":"",
       "isUnique":true,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -590,10 +590,10 @@
       "xp":{
          "$numberInt":"0"
       },
-      "trait":[
+      "traits":[
          "Item"
       ],
-      "slot":[
+      "slots":[
 
       ],
       "will":{
@@ -636,7 +636,7 @@
       "number":{
          "$numberInt":"8"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -650,7 +650,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -662,10 +662,10 @@
       "xp":{
          "$numberInt":"0"
       },
-      "trait":[
+      "traits":[
          "Spell"
       ],
-      "slot":[
+      "slots":[
 
       ],
       "will":{
@@ -708,7 +708,7 @@
       "number":{
          "$numberInt":"13"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -722,7 +722,7 @@
       "subname":"Artifact from Another Life",
       "img":"",
       "isUnique":true,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -734,11 +734,11 @@
       "xp":{
          "$numberInt":"0"
       },
-      "trait":[
+      "traits":[
          "Item",
          "Relic"
       ],
-      "slot":[
+      "slots":[
          "Accessory"
       ],
       "will":{
@@ -781,7 +781,7 @@
       "number":{
          "$numberInt":"12"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -795,7 +795,7 @@
       "subname":"The Fed",
       "img":"",
       "isUnique":true,
-      "doubleFaced":true,
+      "isDoubleFaced":true,
       "backName":"Roland Banks",
       "backText":"Deck size: 30.\n\nDeckbuilding options: Guardian cards ([guardian]) level 0-5, Seeker cards ([seeker]) level 0-2, Neutral cards level 0-5.\n\nDeckbuilding requirements (do not count toward deck size): Roland's .38 Special, Cover Up, 1 random basic weakness.",
       "backFlavor":"Roland had always taken comfort in procedure and rules. As an agent in the Bureau, he was relieved to have guidelines to follow in any given situation. But lately, his Federal Agent's Handbook had been entirely unhelpful given the cases he'd been assigned. Try as he might, Roland could find no mention of what to do when confronted with strange creatures, gates through time and space, or magic spells. If he hadn't seen it with his own eyes, he would never have believed it... and there's no way his superiors would understand. Roland knew he would have to handle this one himself.",
@@ -803,11 +803,11 @@
       "subtype":null,
       "cost":null,
       "xp":null,
-      "trait":[
+      "traits":[
          "Agency",
          "Detective"
       ],
-      "slot":[
+      "slots":[
 
       ],
       "will":{
@@ -855,7 +855,7 @@
       "number":{
          "$numberInt":"1"
       },
-      "deckOption":[
+      "deckOptions":[
          {
             "faction":"Neutral",
             "min":{
@@ -904,7 +904,7 @@
       "subname":"John Dee Translation",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -914,11 +914,11 @@
       "xp":{
          "$numberInt":"0"
       },
-      "trait":[
+      "traits":[
          "Item",
          "Tome"
       ],
-      "slot":[
+      "slots":[
          "Hand"
       ],
       "will":{
@@ -961,7 +961,7 @@
       "number":{
          "$numberInt":"9"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -975,7 +975,7 @@
       "subname":"",
       "img":"",
       "isUnique":true,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -987,11 +987,11 @@
       "xp":{
          "$numberInt":"0"
       },
-      "trait":[
+      "traits":[
          "Item",
          "Relic"
       ],
-      "slot":[
+      "slots":[
          "Accessory"
       ],
       "will":{
@@ -1034,7 +1034,7 @@
       "number":{
          "$numberInt":"14"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -1048,7 +1048,7 @@
       "subname":"The Waitress",
       "img":"",
       "isUnique":true,
-      "doubleFaced":true,
+      "isDoubleFaced":true,
       "backName":"Agnes Baker",
       "backText":"Deck size: 30.\n\nDeckbuilding options: Mystic cards ([mystic]) level 0-5, Survivor cards ([survivor]) level 0-2, Neutral cards level 0-5.\n\nDeckbuilding requirements (do not count toward deck size): Heirloom of Hyperborea, Dark Memory, 1 random basic weakness.",
       "backFlavor":"Agnes Baker may be just an unassuming waitress in this life, but in a previous life, in a time and age undreamed of in the modern world, she had been a powerful witch. It began when she found a strange artifact — a key of some kind — in a dusty collection of family belongings in her attic. When she touched it, the memories came flooding back, along with one word: \"Hyperborea.\" The more she delved into the visions and memories of her former life, the stronger her powers grew... and the more frightened she became.",
@@ -1056,10 +1056,10 @@
       "subtype":null,
       "cost":null,
       "xp":null,
-      "trait":[
+      "traits":[
          "Sorcerer"
       ],
-      "slot":[
+      "slots":[
 
       ],
       "will":{
@@ -1107,7 +1107,7 @@
       "number":{
          "$numberInt":"4"
       },
-      "deckOption":[
+      "deckOptions":[
          {
             "faction":"Neutral",
             "min":{
@@ -1156,7 +1156,7 @@
       "subname":"The Ex-Con",
       "img":"",
       "isUnique":true,
-      "doubleFaced":true,
+      "isDoubleFaced":true,
       "backName":"\"Skids\" O'Toole",
       "backText":"Deck size: 30.\n\nDeckbuilding options: Rogue cards ([rogue]) level 0-5, Guardian cards ([guardian]) level 0-2, Neutral cards level 0-5.\n\nDeckbuilding requirements (do not count toward deck size): On the Lam, Hospital Debts, 1 random basic weakness.",
       "backFlavor":"Skids hadn't planned on a life of crime. But sometimes doing the right thing means getting your hands dirty. The cops didn't care that Skids needed the money for his mother's operation. His mother died of her illness during the second year of his sentence. His cellmate, Brad Hollins, told him there were worse fates than death. He ranted and raved in a quiet voice every evening about the \"Old Ones\" and told Skids about bizzare adventures he'd had while dreaming. Skids didn't give it much thought until the night he woke to the sight of his cellmate bursting into flames. When Skids was finally released, he returned to Arkham, looking for answers.",
@@ -1164,10 +1164,10 @@
       "subtype":null,
       "cost":null,
       "xp":null,
-      "trait":[
+      "traits":[
          "Criminal"
       ],
-      "slot":[
+      "slots":[
 
       ],
       "will":{
@@ -1215,7 +1215,7 @@
       "number":{
          "$numberInt":"3"
       },
-      "deckOption":[
+      "deckOptions":[
          {
             "faction":"Neutral",
             "min":{
@@ -1264,7 +1264,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -1276,12 +1276,12 @@
       "xp":{
          "$numberInt":"0"
       },
-      "trait":[
+      "traits":[
          "Item",
          "Weapon",
          "Firearm"
       ],
-      "slot":[
+      "slots":[
          "Hand"
       ],
       "will":{
@@ -1324,7 +1324,7 @@
       "number":{
          "$numberInt":"16"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -1338,7 +1338,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -1350,10 +1350,10 @@
       "xp":{
          "$numberInt":"0"
       },
-      "trait":[
+      "traits":[
          "Talent"
       ],
-      "slot":[
+      "slots":[
 
       ],
       "will":{
@@ -1396,7 +1396,7 @@
       "number":{
          "$numberInt":"17"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -1410,7 +1410,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -1422,11 +1422,11 @@
       "xp":{
          "$numberInt":"0"
       },
-      "trait":[
+      "traits":[
          "Ally",
          "Police"
       ],
-      "slot":[
+      "slots":[
          "Ally"
       ],
       "will":{
@@ -1469,7 +1469,7 @@
       "number":{
          "$numberInt":"18"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -1483,7 +1483,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -1495,11 +1495,11 @@
       "xp":{
          "$numberInt":"0"
       },
-      "trait":[
+      "traits":[
          "Talent",
          "Science"
       ],
-      "slot":[
+      "slots":[
 
       ],
       "will":{
@@ -1542,7 +1542,7 @@
       "number":{
          "$numberInt":"19"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -1556,7 +1556,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -1568,12 +1568,12 @@
       "xp":{
          "$numberInt":"0"
       },
-      "trait":[
+      "traits":[
          "Item",
          "Weapon",
          "Melee"
       ],
-      "slot":[
+      "slots":[
          "Hand"
       ],
       "will":{
@@ -1616,7 +1616,7 @@
       "number":{
          "$numberInt":"20"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -1630,7 +1630,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -1642,11 +1642,11 @@
       "xp":{
          "$numberInt":"0"
       },
-      "trait":[
+      "traits":[
          "Ally",
          "Creature"
       ],
-      "slot":[
+      "slots":[
          "Ally"
       ],
       "will":{
@@ -1689,7 +1689,7 @@
       "number":{
          "$numberInt":"21"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -1703,7 +1703,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -1715,10 +1715,10 @@
       "xp":{
          "$numberInt":"0"
       },
-      "trait":[
+      "traits":[
          "Insight"
       ],
-      "slot":[
+      "slots":[
 
       ],
       "will":{
@@ -1761,7 +1761,7 @@
       "number":{
          "$numberInt":"22"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -1775,7 +1775,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -1787,10 +1787,10 @@
       "xp":{
          "$numberInt":"0"
       },
-      "trait":[
+      "traits":[
          "Tactic"
       ],
-      "slot":[
+      "slots":[
 
       ],
       "will":{
@@ -1833,7 +1833,7 @@
       "number":{
          "$numberInt":"23"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -1847,7 +1847,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -1859,10 +1859,10 @@
       "xp":{
          "$numberInt":"0"
       },
-      "trait":[
+      "traits":[
          "Tactic"
       ],
-      "slot":[
+      "slots":[
 
       ],
       "will":{
@@ -1905,7 +1905,7 @@
       "number":{
          "$numberInt":"24"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -1919,7 +1919,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -1929,10 +1929,10 @@
       "xp":{
          "$numberInt":"0"
       },
-      "trait":[
+      "traits":[
          "Practiced"
       ],
-      "slot":[
+      "slots":[
 
       ],
       "will":{
@@ -1975,7 +1975,7 @@
       "number":{
          "$numberInt":"25"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -1989,7 +1989,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -2001,10 +2001,10 @@
       "xp":{
          "$numberInt":"1"
       },
-      "trait":[
+      "traits":[
          "Supply"
       ],
-      "slot":[
+      "slots":[
 
       ],
       "will":{
@@ -2047,7 +2047,7 @@
       "number":{
          "$numberInt":"26"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -2061,7 +2061,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -2073,10 +2073,10 @@
       "xp":{
          "$numberInt":"2"
       },
-      "trait":[
+      "traits":[
          "Item"
       ],
-      "slot":[
+      "slots":[
          "Accessory"
       ],
       "will":{
@@ -2119,7 +2119,7 @@
       "number":{
          "$numberInt":"27"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -2133,7 +2133,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -2145,11 +2145,11 @@
       "xp":{
          "$numberInt":"2"
       },
-      "trait":[
+      "traits":[
          "Ally",
          "Police"
       ],
-      "slot":[
+      "slots":[
          "Ally"
       ],
       "will":{
@@ -2192,7 +2192,7 @@
       "number":{
          "$numberInt":"28"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -2206,7 +2206,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -2218,12 +2218,12 @@
       "xp":{
          "$numberInt":"4"
       },
-      "trait":[
+      "traits":[
          "Item",
          "Weapon",
          "Firearm"
       ],
-      "slot":[
+      "slots":[
          "Hand x2"
       ],
       "will":{
@@ -2266,7 +2266,7 @@
       "number":{
          "$numberInt":"29"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -2280,7 +2280,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -2292,11 +2292,11 @@
       "xp":{
          "$numberInt":"0"
       },
-      "trait":[
+      "traits":[
          "Item",
          "Tool"
       ],
-      "slot":[
+      "slots":[
          "Hand"
       ],
       "will":{
@@ -2339,7 +2339,7 @@
       "number":{
          "$numberInt":"30"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -2353,7 +2353,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -2365,11 +2365,11 @@
       "xp":{
          "$numberInt":"0"
       },
-      "trait":[
+      "traits":[
          "Item",
          "Tool"
       ],
-      "slot":[
+      "slots":[
          "Hand"
       ],
       "will":{
@@ -2412,7 +2412,7 @@
       "number":{
          "$numberInt":"31"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -2426,7 +2426,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -2438,11 +2438,11 @@
       "xp":{
          "$numberInt":"0"
       },
-      "trait":[
+      "traits":[
          "Ally",
          "Miskatonic"
       ],
-      "slot":[
+      "slots":[
          "Ally"
       ],
       "will":{
@@ -2485,7 +2485,7 @@
       "number":{
          "$numberInt":"32"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -2499,7 +2499,7 @@
       "subname":"Professor of Entomology",
       "img":"",
       "isUnique":true,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -2511,11 +2511,11 @@
       "xp":{
          "$numberInt":"0"
       },
-      "trait":[
+      "traits":[
          "Ally",
          "Miskatonic"
       ],
-      "slot":[
+      "slots":[
          "Ally"
       ],
       "will":{
@@ -2558,7 +2558,7 @@
       "number":{
          "$numberInt":"33"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -2572,7 +2572,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -2584,10 +2584,10 @@
       "xp":{
          "$numberInt":"0"
       },
-      "trait":[
+      "traits":[
          "Talent"
       ],
-      "slot":[
+      "slots":[
 
       ],
       "will":{
@@ -2630,7 +2630,7 @@
       "number":{
          "$numberInt":"34"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -2644,7 +2644,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -2656,11 +2656,11 @@
       "xp":{
          "$numberInt":"0"
       },
-      "trait":[
+      "traits":[
          "Item",
          "Tome"
       ],
-      "slot":[
+      "slots":[
          "Hand"
       ],
       "will":{
@@ -2703,7 +2703,7 @@
       "number":{
          "$numberInt":"35"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -2717,7 +2717,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -2729,10 +2729,10 @@
       "xp":{
          "$numberInt":"0"
       },
-      "trait":[
+      "traits":[
          "Insight"
       ],
-      "slot":[
+      "slots":[
 
       ],
       "will":{
@@ -2775,7 +2775,7 @@
       "number":{
          "$numberInt":"36"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -2789,7 +2789,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -2801,10 +2801,10 @@
       "xp":{
          "$numberInt":"0"
       },
-      "trait":[
+      "traits":[
          "Insight"
       ],
-      "slot":[
+      "slots":[
 
       ],
       "will":{
@@ -2847,7 +2847,7 @@
       "number":{
          "$numberInt":"37"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -2861,7 +2861,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -2873,11 +2873,11 @@
       "xp":{
          "$numberInt":"0"
       },
-      "trait":[
+      "traits":[
          "Insight",
          "Tactic"
       ],
-      "slot":[
+      "slots":[
 
       ],
       "will":{
@@ -2920,7 +2920,7 @@
       "number":{
          "$numberInt":"38"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -2934,7 +2934,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -2944,10 +2944,10 @@
       "xp":{
          "$numberInt":"0"
       },
-      "trait":[
+      "traits":[
          "Practiced"
       ],
-      "slot":[
+      "slots":[
 
       ],
       "will":{
@@ -2990,7 +2990,7 @@
       "number":{
          "$numberInt":"39"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -3004,7 +3004,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -3016,11 +3016,11 @@
       "xp":{
          "$numberInt":"1"
       },
-      "trait":[
+      "traits":[
          "Item",
          "Tool"
       ],
-      "slot":[
+      "slots":[
          "Hand"
       ],
       "will":{
@@ -3063,7 +3063,7 @@
       "number":{
          "$numberInt":"40"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -3077,7 +3077,7 @@
       "subname":"Protective Amulet",
       "img":"",
       "isUnique":true,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -3089,11 +3089,11 @@
       "xp":{
          "$numberInt":"2"
       },
-      "trait":[
+      "traits":[
          "Item",
          "Relic"
       ],
-      "slot":[
+      "slots":[
          "Accessory"
       ],
       "will":{
@@ -3136,7 +3136,7 @@
       "number":{
          "$numberInt":"41"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -3150,7 +3150,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -3162,11 +3162,11 @@
       "xp":{
          "$numberInt":"2"
       },
-      "trait":[
+      "traits":[
          "Item",
          "Tome"
       ],
-      "slot":[
+      "slots":[
          "Hand"
       ],
       "will":{
@@ -3209,7 +3209,7 @@
       "number":{
          "$numberInt":"42"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -3223,7 +3223,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -3235,10 +3235,10 @@
       "xp":{
          "$numberInt":"4"
       },
-      "trait":[
+      "traits":[
          "Insight"
       ],
-      "slot":[
+      "slots":[
 
       ],
       "will":{
@@ -3281,7 +3281,7 @@
       "number":{
          "$numberInt":"43"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -3295,7 +3295,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -3307,13 +3307,13 @@
       "xp":{
          "$numberInt":"0"
       },
-      "trait":[
+      "traits":[
          "Item",
          "Weapon",
          "Melee",
          "Illicit"
       ],
-      "slot":[
+      "slots":[
          "Hand"
       ],
       "will":{
@@ -3356,7 +3356,7 @@
       "number":{
          "$numberInt":"44"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -3370,7 +3370,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -3382,11 +3382,11 @@
       "xp":{
          "$numberInt":"0"
       },
-      "trait":[
+      "traits":[
          "Talent",
          "illicit"
       ],
-      "slot":[
+      "slots":[
 
       ],
       "will":{
@@ -3429,7 +3429,7 @@
       "number":{
          "$numberInt":"45"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -3443,7 +3443,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -3455,11 +3455,11 @@
       "xp":{
          "$numberInt":"0"
       },
-      "trait":[
+      "traits":[
          "Talent",
          "illicit"
       ],
-      "slot":[
+      "slots":[
 
       ],
       "will":{
@@ -3502,7 +3502,7 @@
       "number":{
          "$numberInt":"46"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -3516,7 +3516,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -3528,13 +3528,13 @@
       "xp":{
          "$numberInt":"0"
       },
-      "trait":[
+      "traits":[
          "Item",
          "Weapon",
          "Firearm",
          "illicit"
       ],
-      "slot":[
+      "slots":[
          "Hand"
       ],
       "will":{
@@ -3577,7 +3577,7 @@
       "number":{
          "$numberInt":"47"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -3591,7 +3591,7 @@
       "subname":"The Louisiana Lion",
       "img":"",
       "isUnique":true,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -3603,11 +3603,11 @@
       "xp":{
          "$numberInt":"0"
       },
-      "trait":[
+      "traits":[
          "Ally",
          "Criminal"
       ],
-      "slot":[
+      "slots":[
          "Ally"
       ],
       "will":{
@@ -3650,7 +3650,7 @@
       "number":{
          "$numberInt":"48"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -3664,7 +3664,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -3676,10 +3676,10 @@
       "xp":{
          "$numberInt":"0"
       },
-      "trait":[
+      "traits":[
          "Talent"
       ],
-      "slot":[
+      "slots":[
 
       ],
       "will":{
@@ -3722,7 +3722,7 @@
       "number":{
          "$numberInt":"49"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -3736,7 +3736,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -3748,10 +3748,10 @@
       "xp":{
          "$numberInt":"0"
       },
-      "trait":[
+      "traits":[
          "Tactic"
       ],
-      "slot":[
+      "slots":[
 
       ],
       "will":{
@@ -3794,7 +3794,7 @@
       "number":{
          "$numberInt":"50"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -3808,7 +3808,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -3820,10 +3820,10 @@
       "xp":{
          "$numberInt":"0"
       },
-      "trait":[
+      "traits":[
          "Tactic"
       ],
-      "slot":[
+      "slots":[
 
       ],
       "will":{
@@ -3866,7 +3866,7 @@
       "number":{
          "$numberInt":"51"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -3880,7 +3880,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -3892,10 +3892,10 @@
       "xp":{
          "$numberInt":"0"
       },
-      "trait":[
+      "traits":[
          "Tactic"
       ],
-      "slot":[
+      "slots":[
 
       ],
       "will":{
@@ -3938,7 +3938,7 @@
       "number":{
          "$numberInt":"52"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -3952,7 +3952,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -3962,10 +3962,10 @@
       "xp":{
          "$numberInt":"0"
       },
-      "trait":[
+      "traits":[
          "Innate"
       ],
-      "slot":[
+      "slots":[
 
       ],
       "will":{
@@ -4008,7 +4008,7 @@
       "number":{
          "$numberInt":"53"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -4022,7 +4022,7 @@
       "subname":"The Louisiana Lion",
       "img":"",
       "isUnique":true,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -4034,11 +4034,11 @@
       "xp":{
          "$numberInt":"1"
       },
-      "trait":[
+      "traits":[
          "Ally",
          "Criminal"
       ],
-      "slot":[
+      "slots":[
          "Ally"
       ],
       "will":{
@@ -4081,7 +4081,7 @@
       "number":{
          "$numberInt":"54"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -4095,7 +4095,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -4107,11 +4107,11 @@
       "xp":{
          "$numberInt":"1"
       },
-      "trait":[
+      "traits":[
          "Ally",
          "Criminal"
       ],
-      "slot":[
+      "slots":[
          "Ally"
       ],
       "will":{
@@ -4154,7 +4154,7 @@
       "number":{
          "$numberInt":"55"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -4168,7 +4168,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -4180,11 +4180,11 @@
       "xp":{
          "$numberInt":"3"
       },
-      "trait":[
+      "traits":[
          "Fortune",
          "Insight"
       ],
-      "slot":[
+      "slots":[
 
       ],
       "will":{
@@ -4227,7 +4227,7 @@
       "number":{
          "$numberInt":"56"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -4241,7 +4241,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -4253,10 +4253,10 @@
       "xp":{
          "$numberInt":"4"
       },
-      "trait":[
+      "traits":[
          "Fortune"
       ],
-      "slot":[
+      "slots":[
 
       ],
       "will":{
@@ -4299,7 +4299,7 @@
       "number":{
          "$numberInt":"57"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -4313,7 +4313,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -4325,10 +4325,10 @@
       "xp":{
          "$numberInt":"0"
       },
-      "trait":[
+      "traits":[
          "Talent"
       ],
-      "slot":[
+      "slots":[
 
       ],
       "will":{
@@ -4371,7 +4371,7 @@
       "number":{
          "$numberInt":"58"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -4385,7 +4385,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -4397,11 +4397,11 @@
       "xp":{
          "$numberInt":"0"
       },
-      "trait":[
+      "traits":[
          "Item",
          "Charm"
       ],
-      "slot":[
+      "slots":[
          "Accessory"
       ],
       "will":{
@@ -4444,7 +4444,7 @@
       "number":{
          "$numberInt":"59"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -4458,7 +4458,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -4470,10 +4470,10 @@
       "xp":{
          "$numberInt":"0"
       },
-      "trait":[
+      "traits":[
          "Spell"
       ],
-      "slot":[
+      "slots":[
          "Arcane"
       ],
       "will":{
@@ -4516,7 +4516,7 @@
       "number":{
          "$numberInt":"60"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -4530,7 +4530,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -4542,10 +4542,10 @@
       "xp":{
          "$numberInt":"0"
       },
-      "trait":[
+      "traits":[
          "Spell"
       ],
-      "slot":[
+      "slots":[
          "Arcane"
       ],
       "will":{
@@ -4588,7 +4588,7 @@
       "number":{
          "$numberInt":"61"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -4602,7 +4602,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -4614,10 +4614,10 @@
       "xp":{
          "$numberInt":"0"
       },
-      "trait":[
+      "traits":[
          "Talent"
       ],
-      "slot":[
+      "slots":[
 
       ],
       "will":{
@@ -4660,7 +4660,7 @@
       "number":{
          "$numberInt":"62"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -4674,7 +4674,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -4686,11 +4686,11 @@
       "xp":{
          "$numberInt":"0"
       },
-      "trait":[
+      "traits":[
          "Ally",
          "Sorcerer"
       ],
-      "slot":[
+      "slots":[
          "Ally"
       ],
       "will":{
@@ -4733,7 +4733,7 @@
       "number":{
          "$numberInt":"63"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -4747,7 +4747,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -4759,10 +4759,10 @@
       "xp":{
          "$numberInt":"0"
       },
-      "trait":[
+      "traits":[
          "Insight"
       ],
-      "slot":[
+      "slots":[
 
       ],
       "will":{
@@ -4805,7 +4805,7 @@
       "number":{
          "$numberInt":"64"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -4819,7 +4819,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -4831,11 +4831,11 @@
       "xp":{
          "$numberInt":"0"
       },
-      "trait":[
+      "traits":[
          "Spell",
          "Spirit"
       ],
-      "slot":[
+      "slots":[
 
       ],
       "will":{
@@ -4878,7 +4878,7 @@
       "number":{
          "$numberInt":"65"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -4892,7 +4892,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -4904,10 +4904,10 @@
       "xp":{
          "$numberInt":"0"
       },
-      "trait":[
+      "traits":[
          "Spell"
       ],
-      "slot":[
+      "slots":[
 
       ],
       "will":{
@@ -4950,7 +4950,7 @@
       "number":{
          "$numberInt":"66"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -4964,7 +4964,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -4974,10 +4974,10 @@
       "xp":{
          "$numberInt":"0"
       },
-      "trait":[
+      "traits":[
          "Innate"
       ],
-      "slot":[
+      "slots":[
 
       ],
       "will":{
@@ -5020,7 +5020,7 @@
       "number":{
          "$numberInt":"67"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -5034,7 +5034,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -5046,10 +5046,10 @@
       "xp":{
          "$numberInt":"1"
       },
-      "trait":[
+      "traits":[
          "Spell"
       ],
-      "slot":[
+      "slots":[
 
       ],
       "will":{
@@ -5092,7 +5092,7 @@
       "number":{
          "$numberInt":"68"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -5106,7 +5106,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -5118,10 +5118,10 @@
       "xp":{
          "$numberInt":"2"
       },
-      "trait":[
+      "traits":[
          "Spell"
       ],
-      "slot":[
+      "slots":[
 
       ],
       "will":{
@@ -5164,7 +5164,7 @@
       "number":{
          "$numberInt":"69"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -5178,7 +5178,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -5190,11 +5190,11 @@
       "xp":{
          "$numberInt":"3"
       },
-      "trait":[
+      "traits":[
          "Item",
          "Tome"
       ],
-      "slot":[
+      "slots":[
          "Hand"
       ],
       "will":{
@@ -5237,7 +5237,7 @@
       "number":{
          "$numberInt":"70"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -5251,7 +5251,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -5263,11 +5263,11 @@
       "xp":{
          "$numberInt":"4"
       },
-      "trait":[
+      "traits":[
          "Item",
          "Relic"
       ],
-      "slot":[
+      "slots":[
          "Hand"
       ],
       "will":{
@@ -5310,7 +5310,7 @@
       "number":{
          "$numberInt":"71"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -5324,7 +5324,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -5336,11 +5336,11 @@
       "xp":{
          "$numberInt":"0"
       },
-      "trait":[
+      "traits":[
          "Item",
          "Armor"
       ],
-      "slot":[
+      "slots":[
          "Body"
       ],
       "will":{
@@ -5383,7 +5383,7 @@
       "number":{
          "$numberInt":"72"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -5397,7 +5397,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -5409,10 +5409,10 @@
       "xp":{
          "$numberInt":"0"
       },
-      "trait":[
+      "traits":[
          "Talent"
       ],
-      "slot":[
+      "slots":[
 
       ],
       "will":{
@@ -5455,7 +5455,7 @@
       "number":{
          "$numberInt":"73"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -5469,7 +5469,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -5481,12 +5481,12 @@
       "xp":{
          "$numberInt":"0"
       },
-      "trait":[
+      "traits":[
          "Item",
          "Weapon",
          "Melee"
       ],
-      "slot":[
+      "slots":[
          "Hand x2"
       ],
       "will":{
@@ -5529,7 +5529,7 @@
       "number":{
          "$numberInt":"74"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -5543,7 +5543,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -5555,11 +5555,11 @@
       "xp":{
          "$numberInt":"0"
       },
-      "trait":[
+      "traits":[
          "Item",
          "Charm"
       ],
-      "slot":[
+      "slots":[
          "Accessory"
       ],
       "will":{
@@ -5602,7 +5602,7 @@
       "number":{
          "$numberInt":"75"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -5616,7 +5616,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -5628,11 +5628,11 @@
       "xp":{
          "$numberInt":"0"
       },
-      "trait":[
+      "traits":[
          "Ally",
          "Creature"
       ],
-      "slot":[
+      "slots":[
          "Ally"
       ],
       "will":{
@@ -5675,7 +5675,7 @@
       "number":{
          "$numberInt":"76"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -5689,7 +5689,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -5701,10 +5701,10 @@
       "xp":{
          "$numberInt":"0"
       },
-      "trait":[
+      "traits":[
          "Talent"
       ],
-      "slot":[
+      "slots":[
 
       ],
       "will":{
@@ -5747,7 +5747,7 @@
       "number":{
          "$numberInt":"77"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -5761,7 +5761,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -5773,10 +5773,10 @@
       "xp":{
          "$numberInt":"0"
       },
-      "trait":[
+      "traits":[
          "Tactic"
       ],
-      "slot":[
+      "slots":[
 
       ],
       "will":{
@@ -5819,7 +5819,7 @@
       "number":{
          "$numberInt":"78"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -5833,7 +5833,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -5845,10 +5845,10 @@
       "xp":{
          "$numberInt":"0"
       },
-      "trait":[
+      "traits":[
          "Fortune"
       ],
-      "slot":[
+      "slots":[
 
       ],
       "will":{
@@ -5891,7 +5891,7 @@
       "number":{
          "$numberInt":"79"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -5905,7 +5905,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -5917,10 +5917,10 @@
       "xp":{
          "$numberInt":"0"
       },
-      "trait":[
+      "traits":[
          "Fortune"
       ],
-      "slot":[
+      "slots":[
 
       ],
       "will":{
@@ -5963,7 +5963,7 @@
       "number":{
          "$numberInt":"80"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -5977,7 +5977,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -5987,10 +5987,10 @@
       "xp":{
          "$numberInt":"0"
       },
-      "trait":[
+      "traits":[
          "Innate"
       ],
-      "slot":[
+      "slots":[
 
       ],
       "will":{
@@ -6033,7 +6033,7 @@
       "number":{
          "$numberInt":"81"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -6047,7 +6047,7 @@
       "subname":"The Forgotten Daughter",
       "img":"",
       "isUnique":true,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -6059,10 +6059,10 @@
       "xp":{
          "$numberInt":"1"
       },
-      "trait":[
+      "traits":[
          "Ally"
       ],
-      "slot":[
+      "slots":[
          "Ally"
       ],
       "will":{
@@ -6105,7 +6105,7 @@
       "number":{
          "$numberInt":"82"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -6119,7 +6119,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -6131,10 +6131,10 @@
       "xp":{
          "$numberInt":"2"
       },
-      "trait":[
+      "traits":[
          "Fortune"
       ],
-      "slot":[
+      "slots":[
 
       ],
       "will":{
@@ -6177,7 +6177,7 @@
       "number":{
          "$numberInt":"83"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -6191,7 +6191,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -6203,10 +6203,10 @@
       "xp":{
          "$numberInt":"2"
       },
-      "trait":[
+      "traits":[
          "Fortune"
       ],
-      "slot":[
+      "slots":[
 
       ],
       "will":{
@@ -6249,7 +6249,7 @@
       "number":{
          "$numberInt":"84"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -6263,7 +6263,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -6275,10 +6275,10 @@
       "xp":{
          "$numberInt":"3"
       },
-      "trait":[
+      "traits":[
          "Spirit"
       ],
-      "slot":[
+      "slots":[
 
       ],
       "will":{
@@ -6321,7 +6321,7 @@
       "number":{
          "$numberInt":"85"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -6335,7 +6335,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -6347,12 +6347,12 @@
       "xp":{
          "$numberInt":"0"
       },
-      "trait":[
+      "traits":[
          "Item",
          "Weapon",
          "Melee"
       ],
-      "slot":[
+      "slots":[
          "Hand"
       ],
       "will":{
@@ -6395,7 +6395,7 @@
       "number":{
          "$numberInt":"86"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -6409,7 +6409,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -6421,11 +6421,11 @@
       "xp":{
          "$numberInt":"0"
       },
-      "trait":[
+      "traits":[
          "Item",
          "Tool"
       ],
-      "slot":[
+      "slots":[
          "Hand"
       ],
       "will":{
@@ -6468,7 +6468,7 @@
       "number":{
          "$numberInt":"87"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -6482,7 +6482,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -6494,10 +6494,10 @@
       "xp":{
          "$numberInt":"0"
       },
-      "trait":[
+      "traits":[
          "Supply"
       ],
-      "slot":[
+      "slots":[
 
       ],
       "will":{
@@ -6540,7 +6540,7 @@
       "number":{
          "$numberInt":"88"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -6554,7 +6554,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -6564,10 +6564,10 @@
       "xp":{
          "$numberInt":"0"
       },
-      "trait":[
+      "traits":[
          "Innate"
       ],
-      "slot":[
+      "slots":[
 
       ],
       "will":{
@@ -6610,7 +6610,7 @@
       "number":{
          "$numberInt":"89"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -6624,7 +6624,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -6634,10 +6634,10 @@
       "xp":{
          "$numberInt":"0"
       },
-      "trait":[
+      "traits":[
          "Practiced"
       ],
-      "slot":[
+      "slots":[
 
       ],
       "will":{
@@ -6680,7 +6680,7 @@
       "number":{
          "$numberInt":"90"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -6694,7 +6694,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -6704,10 +6704,10 @@
       "xp":{
          "$numberInt":"0"
       },
-      "trait":[
+      "traits":[
          "Practiced"
       ],
-      "slot":[
+      "slots":[
 
       ],
       "will":{
@@ -6750,7 +6750,7 @@
       "number":{
          "$numberInt":"91"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -6764,7 +6764,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -6774,10 +6774,10 @@
       "xp":{
          "$numberInt":"0"
       },
-      "trait":[
+      "traits":[
          "Innate"
       ],
-      "slot":[
+      "slots":[
 
       ],
       "will":{
@@ -6820,7 +6820,7 @@
       "number":{
          "$numberInt":"92"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -6834,7 +6834,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -6844,10 +6844,10 @@
       "xp":{
          "$numberInt":"0"
       },
-      "trait":[
+      "traits":[
          "Innate"
       ],
-      "slot":[
+      "slots":[
 
       ],
       "will":{
@@ -6890,7 +6890,7 @@
       "number":{
          "$numberInt":"93"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -6904,7 +6904,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -6916,11 +6916,11 @@
       "xp":{
          "$numberInt":"3"
       },
-      "trait":[
+      "traits":[
          "Item",
          "Armor"
       ],
-      "slot":[
+      "slots":[
          "Body"
       ],
       "will":{
@@ -6963,7 +6963,7 @@
       "number":{
          "$numberInt":"94"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -6977,7 +6977,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -6989,11 +6989,11 @@
       "xp":{
          "$numberInt":"3"
       },
-      "trait":[
+      "traits":[
          "Item",
          "Relic"
       ],
-      "slot":[
+      "slots":[
          "Accessory"
       ],
       "will":{
@@ -7036,7 +7036,7 @@
       "number":{
          "$numberInt":"95"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -7050,7 +7050,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -7060,10 +7060,10 @@
       "xp":{
          "$numberInt":"0"
       },
-      "trait":[
+      "traits":[
          "Madness"
       ],
-      "slot":[
+      "slots":[
 
       ],
       "will":{
@@ -7106,7 +7106,7 @@
       "number":{
          "$numberInt":"96"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -7120,7 +7120,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -7130,10 +7130,10 @@
       "xp":{
          "$numberInt":"0"
       },
-      "trait":[
+      "traits":[
          "Madness"
       ],
-      "slot":[
+      "slots":[
 
       ],
       "will":{
@@ -7176,7 +7176,7 @@
       "number":{
          "$numberInt":"97"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -7190,7 +7190,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -7200,10 +7200,10 @@
       "xp":{
          "$numberInt":"0"
       },
-      "trait":[
+      "traits":[
          "Curse"
       ],
-      "slot":[
+      "slots":[
 
       ],
       "will":{
@@ -7246,7 +7246,7 @@
       "number":{
          "$numberInt":"98"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -7260,7 +7260,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -7270,10 +7270,10 @@
       "xp":{
          "$numberInt":"0"
       },
-      "trait":[
+      "traits":[
          "Madness"
       ],
-      "slot":[
+      "slots":[
 
       ],
       "will":{
@@ -7316,7 +7316,7 @@
       "number":{
          "$numberInt":"99"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{
@@ -7330,7 +7330,7 @@
       "subname":"",
       "img":"",
       "isUnique":false,
-      "doubleFaced":false,
+      "isDoubleFaced":false,
       "backName":"",
       "backText":"",
       "backFlavor":"",
@@ -7343,7 +7343,7 @@
       "trait":[
          "Madness"
       ],
-      "slot":[
+      "slots":[
 
       ],
       "will":{
@@ -7386,7 +7386,7 @@
       "number":{
          "$numberInt":"100"
       },
-      "deckOption":[
+      "deckOptions":[
 
       ],
       "__v":{

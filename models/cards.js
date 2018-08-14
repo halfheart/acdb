@@ -12,7 +12,8 @@ const cardSchema = new mongoose.Schema({
   subname: { type: String, default: '' },
   img: { type: String, default: '' },
   isUnique: { type: Boolean, default: false },
-  doubleFaced: { type: Boolean, default: false },
+  qty: { type: Number, default: 1 },
+  isDoubleFaced: { type: Boolean, default: false },
   backName: { type: String, default: '' },
   backText: { type: String, default: '' },
   backFlavor: { type: String, default: '' },
@@ -20,8 +21,8 @@ const cardSchema = new mongoose.Schema({
   subtype: { type: String, default: null },
   cost: { type: Number, default: null },
   xp: { type: Number, default: null },
-  trait: [{ type: String, default: null }],
-  slot: [{ type: String, default: null }],
+  traits: [{ type: String, default: null }],
+  slots: [{ type: String, default: null }],
   will: { type: Number, default: null },
   int: { type: Number, default: null },
   combat: { type: Number, default: null },
@@ -35,7 +36,7 @@ const cardSchema = new mongoose.Schema({
   text: { type: String, default: '' },
   flavor: { type: String, default: '' },
   deckSize: { type: Number, default: null },
-  deckOption: [{
+  deckOptions: [{
       faction: { type: String, default: '' },
       min: { type: Number, default: 0 },
       max: { type: Number, default: 5 }

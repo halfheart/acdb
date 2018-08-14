@@ -1,40 +1,47 @@
 <template>
-  <v-dialog v-model="show">
+  <v-dialog v-model="show" persistent>
     <v-btn
-    flat
     icon
+    flat
+    color="primary"
     slot="activator">
       <v-icon>edit</v-icon>
     </v-btn>
-    <pack-form ref="form" :title="title" @form-close="close()" @form-submit="submit($event)" />
+    <investigator-form ref="form" :title="title" @form-submit="submit($event)" @form-close="close()" />
   </v-dialog>
 </template>
 
 <script>
-import packAddBtn from '@/components/pack/pack-add-btn'
+import investigatorAdd from './investigator-add'
 
 export default {
-  extends: packAddBtn,
+  extends: investigatorAdd,
   props: {
     id: { type: String, default: '' }
   },
   data () {
     return {
-      title: '팩 수정'
+      title: '조사자 수정'
     }
   },
   methods: {
     submit (e) {
-      this.$axios.put(`${this.$cfg.path.api}data/pack`, e)
+      this.$axios.put(`${this.$cfg.path.api}data/card`, e)
       .then((res) => {
         if (!res.data.success) throw new Error(res.data.msg)
         console.log('수정됨')
-        this.$emit('pack-moded')
         this.close()
+        this.$emit('card-moded')
       })
       .catch((err) => {
         console.log(err.message)
       })
+    }
+  },
+  watch: {
+    show (val) {
+      if (!val) this.close()
+      if (val) this.$refs.form.setForm(this.id)
     }
   }
 }

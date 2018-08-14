@@ -9,7 +9,7 @@
         <v-card-text>
           <v-text-field
           label="팩 이름"
-          :rules="nameRules"
+          :rules="rules.name"
           v-model="form.name">
           </v-text-field>
         </v-card-text>
@@ -41,9 +41,11 @@ export default {
         parent_id: null
       },
       pending: true,
-      nameRules: [
-        (v) => !!v || '이름을 입력해주세요'
-      ]
+      rules: {
+        name: [
+          (v) => !!v || '이름을 입력해주세요'
+        ]
+      }
     }
   },
   methods: {
@@ -54,6 +56,7 @@ export default {
     },
     close () {
       this.$emit('form-close')
+      this.reset()
     },
     reset () {
       this.$refs.form.reset()
