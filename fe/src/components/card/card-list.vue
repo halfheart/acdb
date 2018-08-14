@@ -17,6 +17,7 @@
         <td>{{ cards.item.pack_id.name, cards.item.number | cardNumber }}</td>
         <td>
           <investigator-mod v-if="cards.item.type === $cfg.const.INVESTIGATOR" :id="cards.item._id" @card-moded="list()" />
+          <playercard-mod v-if="cards.item.type !== $cfg.const.INVESTIGATOR" :id="cards.item._id" @card-moded="list()" />
           <card-del-btn :id="cards.item._id" @card-deleted="list()" />
         </td>
       </template>
@@ -35,6 +36,7 @@ import filterMixin from '@/components/mixins/filter-mixin'
 import cardPopover from '@/components/card/card-popover'
 import cardAddFab from '@/components/card/card-add-fab'
 import investigatorMod from '@/components/card/investigator/investigator-mod'
+import playercardMod from '@/components/card/playercard/playercard-mod'
 import cardDelBtn from '@/components/card/card-del-btn'
 export default {
   mixins: [
@@ -44,7 +46,8 @@ export default {
     cardPopover,
     cardAddFab,
     cardDelBtn,
-    investigatorMod
+    investigatorMod,
+    playercardMod
   },
   data () {
     return {

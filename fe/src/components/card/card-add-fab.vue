@@ -15,14 +15,17 @@
       <v-icon>close</v-icon>
     </v-btn>
     <investigator-add @card-added="$emit('card-added')" />
+    <playercard-add @card-added="$emit('card-added')" />
   </v-speed-dial>
 </template>
 
 <script>
 import investigatorAdd from '@/components/card/investigator/investigator-add'
+import playercardAdd from '@/components/card/playercard/playercard-add'
 export default {
   components: {
-    investigatorAdd
+    investigatorAdd,
+    playercardAdd
   },
   data () {
     return {
