@@ -1,5 +1,5 @@
 <template>
-  <v-card>
+  <v-card width="400">
     <v-card-title :class="factionColor(card.faction)">
       <div>
         <div class="headline" v-html="nameWithUnique(card)"></div>
@@ -7,7 +7,7 @@
       </div>
     </v-card-title>
     <v-card-text>
-      <div v-html="factionWithIcon(card.faction)" class="pb-1"></div>
+      <div v-html="factionIcon(card.faction)" class="pb-1"></div>
       <div class="pb-1">
         <span>{{ card.type }}</span>
         <span v-if="card.slots.length > 0">{{ card.slots | slots }}</span>
@@ -42,8 +42,8 @@
 
 <style>
 .card-text {
-  margin: 0px;
-  line-height: 1.3;
+  margin-bottom: 3px;
+  line-height: 1.4;
 }
 div.text-box {
   border-left: solid #666666;

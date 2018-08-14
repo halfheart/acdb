@@ -18,10 +18,15 @@
 </template>
 
 <script>
+import listMixin from '@/components/mixins/list-mixin'
+
 import packAddBtn from '@/components/pack/pack-add-btn'
 import packModBtn from '@/components/pack/pack-mod-btn'
 import packDelBtn from '@/components/pack/pack-del-btn'
 export default {
+  mixins: [
+    listMixin
+  ],
   components: {
     packAddBtn,
     packModBtn,
@@ -35,19 +40,7 @@ export default {
         sort: 1,
         order: '_id'
       },
-      d: {
-        cnt: 0,
-        draw: 0,
-        ds: []
-      }
-    }
-  },
-  computed: {
-    setSkip () {
-      if (this.p.page === 0) return 0
-      const page = this.p.page
-      const limit = this.p.limit
-      return limit * (page - 1)
+      path: 'data/pack'
     }
   },
   created () {
@@ -55,26 +48,9 @@ export default {
   },
   methods: {
     list () {
-      const query = {}
-      const select = ''
-      this.$axios.get(`${this.$cfg.path.api}data/pack`, {
-        params: {
-          draw: this.d.draw + 1,
-          skip: this.setSkip,
-          query: query,
-          limit: this.p.limit,
-          order: this.p.order,
-          sort: this.p.sort,
-          select: select
-        }
-      })
-      .then((res) => {
-        if (!res.data.success) throw new Error(res.data.msg)
-        this.d = res.data.d
-      })
-      .catch((err) => {
-        console.log(err.message)
-      })
+      const q = {}
+      const s = ''
+      this.fetchList(this.path, q, s)
     }
   }
 }

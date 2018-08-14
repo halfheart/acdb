@@ -30,6 +30,9 @@ export default {
     },
     cardNumber: function (p = '', n = '') {
       return `${p} #${n}`
+    },
+    flavor: function (str = '', len = 100) {
+      return `${str.substring(0, len)}...`
     }
   },
   methods: {
@@ -46,14 +49,19 @@ export default {
       if (!obj.isUnique) return obj.name
       return `<span class="font-icon icon-unique" title="${this.$cfg.const.UNIQUE}"></span>${obj.name}`
     },
-    factionWithIcon (str = '') {
+    factionIcon (str = '', withStr = true) {
       const factions = this.$cfg.const.FACTIONS
       const ename = ['neutral', 'survivor', 'guardian', 'mystic', 'seeker', 'rogue']
-      let result = str
+      let result = ''
 
       factions.forEach((i, index) => {
-        if (index === 0) return
-        if (str === i) result = `<span class="img-icon icon-${ename[index]}" title="${str}"></span>${str}`
+        if (index === 0) {
+          result = i
+        }
+        if (str === i) {
+          result = `<span class="img-icon icon-${ename[index]}" title="${str}"></span>`
+          if (withStr) result += str
+        }
       })
       return result
     },
@@ -180,7 +188,6 @@ export default {
 }
 .font-icon {
   font-family: "arkham-icons";
-  font-size: 15pt;
 }
 .icon-guardian {
   background-image: url('http://localhost:3000/images/system/guardian_icon.png');

@@ -38,7 +38,14 @@ exports.list = (req, res) => {
       .skip(skip)
       .limit(limit)
       .sort(s)
-      .populate('pack_id');
+      .populate('pack_id')
+      .populate({
+        path: 'deckReq_ids',
+        populate: {
+          path: 'pack_id',
+          select: 'name'
+        }
+      });
   })
   .then((r) => {
     d.ds = r

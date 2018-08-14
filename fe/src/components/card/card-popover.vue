@@ -2,10 +2,11 @@
   <v-menu
   v-model="show"
   offset-x
+  offset-overflow
   open-on-hover
   transition="slide-x-transition">
     <a
-    class="pa-2"
+    class="pr-2"
     v-html="nameWithUnique(card)"
     slot="activator">
     </a>
