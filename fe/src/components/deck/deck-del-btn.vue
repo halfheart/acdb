@@ -22,27 +22,27 @@ export default {
     confirmCard
   },
   props: {
-    pack_id: { type: String, default: '' }
+    deck_id: { type: String, default: '' }
   },
   data () {
     return {
-      title: '팩 삭제',
+      title: '덱 삭제',
       msg: '정말 삭제하시겠습니까?',
       show: false,
-      path: 'data/pack'
+      path: 'data/deck'
     }
   },
   methods: {
     submit () {
       this.$axios.delete(`${this.$cfg.path.api}${this.path}`, {
         params: {
-          _id: this.pack_id
+          _id: this.deck_id
         }
       })
       .then((res) => {
         if (!res.data.success) throw new Error(res.data.msg)
         console.log('삭제됨')
-        this.$emit('pack-deleted')
+        this.$router.push({ name: 'deckList' })
         this.close()
       })
       .catch((err) => {

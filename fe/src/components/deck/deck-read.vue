@@ -19,6 +19,7 @@
               <v-btn flat icon @click="mod()">
                 <v-icon>edit</v-icon>
               </v-btn>
+              <deck-del-btn :deck_id="deck_id" />
             </v-card-actions>
             <v-card-text>
               <template v-for="s in subheaders" v-if="haveContents(s)">
@@ -50,6 +51,7 @@ import filterMixin from '@/components/mixins/filter-mixin'
 
 import nowLoading from '@/components/now-loading'
 import cardPopover from '@/components/card/card-popover'
+import deckDelBtn from '@/components/deck/deck-del-btn'
 
 export default {
   mixins: [
@@ -60,7 +62,8 @@ export default {
   },
   components: {
     nowLoading,
-    cardPopover
+    cardPopover,
+    deckDelBtn
   },
   data () {
     return {
@@ -130,7 +133,7 @@ export default {
   },
   methods: {
     mod () {
-      this.$router.push({ name: 'deckEdit', query: { deck_id: this.deck_id } })
+      this.$router.push({ name: 'deckEdit', query: { deck_id: this.deck_id, investigator_id: this.deck.investigator._id } })
     },
     fetchDeck () {
       this.$axios.get(`${this.$cfg.path.api}data/deck/${this.deck_id}`)

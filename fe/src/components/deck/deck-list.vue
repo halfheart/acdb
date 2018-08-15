@@ -2,7 +2,7 @@
   <v-container fluid grid-list-md>
     <v-layout row wrap>
       <now-loading :show="pending" />
-      <template v-if="!pending">
+      <template v-if="!pending && d.cnt > 0">
         <v-flex v-for="(i, index) in d.ds" :key="index" md4>
           <v-card>
             <v-card-media
@@ -23,6 +23,9 @@
             </v-card-actions>
           </v-card>
         </v-flex>
+      </template>
+      <template v-else>
+        데이터가 없습니다.
       </template>
     </v-layout>
   </v-container>

@@ -83,7 +83,10 @@ export default {
   },
   methods: {
     reset () {
-      this.toggleBtn = {}
+      this.toggleBtn = []
+    },
+    setDeck (arr = []) {
+      this.toggleBtn = arr
     },
     fetchResource () {
       this.fetchInvestigator()

@@ -28,12 +28,13 @@ export default {
     return {
       title: '카드 삭제',
       msg: '정말 삭제하시겠습니까?',
-      show: false
+      show: false,
+      path: 'data/card'
     }
   },
   methods: {
     submit () {
-      this.$axios.delete(`${this.$cfg.path.api}data/card`, {
+      this.$axios.delete(`${this.$cfg.path.api}${this.path}`, {
         params: {
           _id: this.card_id
         }

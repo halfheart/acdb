@@ -46,6 +46,7 @@
       </v-flex>
       <v-flex md6>
         <deck-source
+        v-show="!pending"
         ref="source"
         @add-to-deck="addToDeck($event)"
         @remove-from-deck="removeFromDeck($event)"
@@ -79,9 +80,7 @@ export default {
         message: ''
       },
       form: {
-        _id: '',
         name: '',
-        author_id: '',
         investigator_id: '',
         cards: [] // { card_id, qty, require }
       }
@@ -130,11 +129,7 @@ export default {
         }
       })
 
-      this.form = {
-        name: '',
-        investigator_id: this.form.investigator_id,
-        cards: cards
-      }
+      this.form.cards = cards
 
       this.$axios.post(`${this.$cfg.path.api}data/deck`, this.form)
       .then((res) => {

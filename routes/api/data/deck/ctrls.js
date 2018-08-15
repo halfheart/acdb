@@ -87,9 +87,36 @@ exports.add = (req, res) => {
 }
 
 exports.mod = (req, res) => {
-  res.send({ success: false, msg: 'deck mod 준비중'})
+  const set = req.body;
+
+  if(!set._id) res.send({ success: false, msg: '_id not exists' });
+
+  const f = { _id: set._id };
+  const s = { $set: set };
+
+  Deck.findOneAndUpdate(f, s)
+  .then((r) => {
+    res.send({ success: true, _id: r._id });
+  })
+  .catch((err) => {
+    res.send({ success: false, msg: err.message });
+  });
 }
 
 exports.del = (req, res) => {
-  res.send({ success: false, msg: 'deck del 준비중'})
+  const _id = req.query;
+
+  if (_id === undefined) res.send({ success: false, msg: 'params err _id' });
+
+  Deck.findOne({ _id: _id })
+  .then((r) => {
+    if (!r) throw new Error('Deck not exists');
+    return Deck.remove({ _id: _id });
+  })
+  .then(() => {
+    res.send({ success: true });
+  })
+  .catch((err) => {
+    res.send({ success: false, msg: err.message });
+  });
 }
