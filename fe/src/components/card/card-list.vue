@@ -16,9 +16,9 @@
         <td>{{ cards.item.traits | traits }}</td>
         <td>{{ cards.item.pack_id.name, cards.item.number | cardNumber }}</td>
         <td>
-          <investigator-mod v-if="cards.item.type === $cfg.const.INVESTIGATOR" :id="cards.item._id" @card-moded="list()" />
-          <playercard-mod v-if="cards.item.type !== $cfg.const.INVESTIGATOR" :id="cards.item._id" @card-moded="list()" />
-          <card-del-btn :id="cards.item._id" @card-deleted="list()" />
+          <investigator-mod v-if="cards.item.type === $cfg.const.INVESTIGATOR" :card_id="cards.item._id" @card-moded="list()" />
+          <playercard-mod v-if="cards.item.type !== $cfg.const.INVESTIGATOR" :card_id="cards.item._id" @card-moded="list()" />
+          <card-del-btn :card_id="cards.item._id" @card-deleted="list()" />
         </td>
       </template>
     </v-data-table>
@@ -53,6 +53,12 @@ export default {
   },
   data () {
     return {
+      p: {
+        page: 1,
+        limit: 20,
+        sort: 1,
+        order: 'number'
+      },
       path: 'data/card',
       headers: [
         {

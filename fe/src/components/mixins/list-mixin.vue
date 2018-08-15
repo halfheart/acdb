@@ -8,9 +8,9 @@ export default {
     return {
       p: {
         page: 1,
-        limit: 10,
+        limit: 0,
         sort: 1,
-        order: 'number'
+        order: '_id'
       },
       d: {
         cnt: 0,

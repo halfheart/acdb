@@ -1,8 +1,8 @@
 <template>
-  <v-card width="400">
+  <v-card>
     <v-card-title :class="factionColor(card.faction)">
       <div>
-        <div class="headline" v-html="nameWithUnique(card)"></div>
+        <div class="headline" v-html="cardNameFormat(card, true, false)"></div>
         <span v-if="card.subname">{{ card.subname }}</span>
       </div>
     </v-card-title>

@@ -16,7 +16,7 @@ import packAddBtn from '@/components/pack/pack-add-btn'
 export default {
   extends: packAddBtn,
   props: {
-    id: { type: String, default: '' }
+    pack_id: { type: String, default: '' }
   },
   data () {
     return {

@@ -9,8 +9,8 @@
           {{ i.name }}
         </v-list-tile-title>
         <v-spacer />
-        <pack-mod-btn @pack-moded="list()" :id="i._id" />
-        <pack-del-btn @pack-deleted="list()" :id="i._id" />
+        <pack-mod-btn @pack-moded="list()" :pack_id="i._id" />
+        <pack-del-btn @pack-deleted="list()" :pack_id="i._id" />
       </v-list-tile>
     </v-list>
     <pack-add-btn @pack-added="list()" />

@@ -1,13 +1,13 @@
 <template>
   <v-menu
+  max-width="400"
   v-model="show"
   offset-x
   offset-overflow
-  open-on-hover
-  transition="slide-x-transition">
+  open-on-hover>
     <a
     class="pr-2"
-    v-html="nameWithUnique(card)"
+    v-html="cardNameFormat(card)"
     slot="activator">
     </a>
     <card-info :card="card" />

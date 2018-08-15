@@ -22,7 +22,7 @@ export default {
     confirmCard
   },
   props: {
-    id: { type: String, default: '' }
+    card_id: { type: String, default: '' }
   },
   data () {
     return {
@@ -35,7 +35,7 @@ export default {
     submit () {
       this.$axios.delete(`${this.$cfg.path.api}data/card`, {
         params: {
-          _id: this.id
+          _id: this.card_id
         }
       })
       .then((res) => {

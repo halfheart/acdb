@@ -1,6 +1,7 @@
 module.exports = {
   path: {
-    api: 'http://localhost:3000/api/'
+    api: 'http://localhost:3000/api/',
+    web: 'http://localhost:8080/#/'
   },
   const: {
     FACTIONS: ['Neutral', 'Survivor', 'Guardian', 'Mystic', 'Seeker', 'Rogue'],

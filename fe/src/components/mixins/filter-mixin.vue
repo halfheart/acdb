@@ -45,9 +45,13 @@ export default {
       if (str === factions[5]) return 'green white--text'
       return 'grey white--text'
     },
-    nameWithUnique (obj = {}) {
-      if (!obj.isUnique) return obj.name
-      return `<span class="font-icon icon-unique" title="${this.$cfg.const.UNIQUE}"></span>${obj.name}`
+    cardNameFormat (card = {}, withUnique = true, withXp = true) {
+      let str = ''
+      if (withUnique && card.isUnique) str += `<span class="font-icon icon-unique" title="${this.$cfg.const.UNIQUE}"></span>`
+      str += card.name
+      if (withXp && card.xp > 0) str += ` (${card.xp})`
+
+      return str
     },
     factionIcon (str = '', withStr = true) {
       const factions = this.$cfg.const.FACTIONS
@@ -57,6 +61,7 @@ export default {
       factions.forEach((i, index) => {
         if (index === 0) {
           result = i
+          return
         }
         if (str === i) {
           result = `<span class="img-icon icon-${ename[index]}" title="${str}"></span>`

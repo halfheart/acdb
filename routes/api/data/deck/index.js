@@ -1,11 +1,11 @@
 const router = require('express').Router();
-const pack = require('./pack');
-const card = require('./card');
-const deck = require('./deck');
+const ctrl = require('./ctrls');
 
-router.use('/pack', pack);
-router.use('/card', card);
-router.use('/deck', deck);
+router.get('/', ctrl.list);
+router.get('/:_id', ctrl.deck);
+router.post('/', ctrl.add);
+router.put('/', ctrl.mod);
+router.delete('/', ctrl.del);
 
 router.all('*', (req, res) => {
   res.status(404).send({ success: false, msg: `unknown uri ${req.path}`});

@@ -17,7 +17,7 @@ import investigatorAdd from './investigator-add'
 export default {
   extends: investigatorAdd,
   props: {
-    id: { type: String, default: '' }
+    card_id: { type: String, default: '' }
   },
   data () {
     return {
@@ -41,7 +41,7 @@ export default {
   watch: {
     show (val) {
       if (!val) this.close()
-      if (val) this.$refs.form.setForm(this.id)
+      if (val) this.$refs.form.setForm(this.card_id)
     }
   }
 }

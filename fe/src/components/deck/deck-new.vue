@@ -4,7 +4,7 @@
       <now-loading :show="pending" />
       <template v-show="!pending">
         <v-flex v-for="(i, index) in d.ds" :key="index" md4>
-          <v-card fill-height>
+          <v-card>
             <v-card-media
             :src="imgPath(i._id)"
             height="150">
@@ -19,7 +19,6 @@
                 <li v-for="(i, index) in i.deckReq_ids" :key="index">
                   <card-popover :card="i" />1장
                 </li>
-                <li>무작위 기본 약점 카드 1장</li>
                 <li>
                   <span v-for="j in i.deckOptions">
                     <span v-if="j.faction !== $cfg.const.FACTIONS[0]">
@@ -31,7 +30,7 @@
             </v-card-text>
             <v-card-actions>
               <v-spacer />
-              <v-btn flat color="indigo" :href="$cfg.path.web+'deck/edit?id='+i._id">
+              <v-btn flat color="indigo" :href="$cfg.path.web+'deck/new/builder?investigator_id='+i._id">
                 선택
               </v-btn>
             </v-card-actions>

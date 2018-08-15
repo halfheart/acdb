@@ -9,6 +9,7 @@ const cardSchema = new mongoose.Schema({
   illustrator: { type: String, required: true }, // required
   pack_id: { type: mongoose.Schema.Types.ObjectId, ref: 'pack', required: true }, // required
   number: { type: Number, required: true }, // required
+  only: { type: Boolean, default: false },
   subname: { type: String, default: '' },
   img: { type: String, default: '' },
   isUnique: { type: Boolean, default: false },
