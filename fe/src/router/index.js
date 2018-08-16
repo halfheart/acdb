@@ -45,8 +45,7 @@ export default new Router({
       name: 'deckEdit',
       component: deckEdit,
       props: (route) => ({
-        deck_id: route.query.deck_id,
-        investigator_id: route.query.investigator_id
+        deck_id: route.query.deck_id
       })
     },
     {

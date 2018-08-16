@@ -42,11 +42,12 @@ export default {
     cardPopover
   },
   props: {
-    investigator_id: { type: String, default: '' }
+    investigator_id: { type: String, default: '' },
+    deck: { type: Object, default: null }
   },
   data () {
     return {
-      toggleBtn: [],
+      toggleBtn: {},
       headers: [
         {
           text: '',
@@ -81,12 +82,20 @@ export default {
   created () {
     this.fetchResource()
   },
+  mounted () {
+    this.setDeck()
+  },
   methods: {
-    reset () {
-      this.toggleBtn = []
+    setDeck () {
+      let obj = {}
+      Object.keys(this.deck).map((key) => {
+        obj[key] = this.deck[key]
+      })
+
+      this.$set(this, 'toggleBtn', obj)
     },
-    setDeck (arr = []) {
-      this.toggleBtn = arr
+    reset () {
+      this.toggleBtn = {}
     },
     fetchResource () {
       this.fetchInvestigator()

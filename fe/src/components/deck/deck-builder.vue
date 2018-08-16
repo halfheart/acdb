@@ -46,11 +46,12 @@
       </v-flex>
       <v-flex md6>
         <deck-source
-        v-show="!pending"
+        v-if="!pending"
         ref="source"
         @add-to-deck="addToDeck($event)"
         @remove-from-deck="removeFromDeck($event)"
-        :investigator_id="investigator_id" />
+        :investigator_id="form.investigator_id"
+        :deck="toggleBtn" />
       </v-flex>
     </v-layout>
   </v-container>
@@ -83,7 +84,8 @@ export default {
         name: '',
         investigator_id: '',
         cards: [] // { card_id, qty, require }
-      }
+      },
+      toggleBtn: {}
     }
   },
   computed: {

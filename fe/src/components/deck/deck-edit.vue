@@ -11,9 +11,6 @@ export default {
 
     }
   },
-  created () {
-
-  },
   methods: {
     fetchInvestigator () {
       // overriding NOP
@@ -36,14 +33,12 @@ export default {
         })
 
         this.deck.cards = cards
-        this.pending = false
 
-        let toggleBtn = {}
         cards.forEach((i) => {
-          toggleBtn[i.card._id] = i.qty
+          this.toggleBtn[i.card._id] = i.qty
         })
 
-        this.$refs.source.setDeck(toggleBtn)
+        this.pending = false
       })
       .catch((err) => {
         console.log(err.message)
