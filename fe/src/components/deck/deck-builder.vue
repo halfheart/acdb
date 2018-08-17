@@ -3,45 +3,60 @@
     <v-layout row wrap>
       <v-flex md6>
         <v-card>
-          <now-loading :show="pending" />
-          <template v-if="!pending">
-            <v-card-title>
-              <v-layout column>
-                <div>
-                  {{ `${invName} Deck.`}}
-                  <span :class="{ isDanger : !validateSize }">{{ `(${deckSize}/${deckLimit})` }}</span>
-                </div>
-                <div v-if="requiredXp > 0">
-                  {{ `XP required: ${requiredXp}`}}
-                </div>
-              </v-layout>
-            </v-card-title>
-            <v-card-actions>
-              <span v-if="err.message" class="isDanger err"><v-icon small color="error">warning</v-icon>{{ err.message }}</span>
-              <v-spacer />
-              <v-btn
-              flat
-              ripple
-              @click="submit()"
-              :disabled="!deckValidate">
-                submit
-              </v-btn>
-              <v-btn
-              flat
-              @click="reset()">
-                reset
-              </v-btn>
-            </v-card-actions>
-            <v-card-text>
-              <template v-for="s in subheaders" v-if="haveContents(s)">
-                <v-subheader>{{ s.title }}</v-subheader>
-                <div v-for="(i, index) in deck.cards" v-if="s.value(i)" :key="index" class="pa-1 pl-4">
-                  {{ `${i.qty}x ` }}
-                  <card-popover :card="i.card" />
-                </div>
-              </template>
-            </v-card-text>
-          </template>
+          <v-form ref="form">
+            <now-loading :show="pending" />
+            <template v-if="!pending">
+              <v-card-title>
+                <v-layout column>
+                  <div>
+                    {{ `${invName} Deck.`}}
+                    <span :class="{ isDanger : !validateSize }">{{ `(${deckSize}/${deckLimit})` }}</span>
+                  </div>
+                  <div>
+                    <v-text-field
+                    label="덱 이름"
+                    v-model="form.name"
+                    :rules="rules.name"
+                    ></v-text-field>
+                  </div>
+                  <div>
+                    <v-textarea
+                    label="덱 소개"
+                    v-model="form.introduce"
+                    ></v-textarea>
+                  </div>
+                  <div v-if="requiredXp > 0">
+                    {{ `XP required: ${requiredXp}`}}
+                  </div>
+                </v-layout>
+              </v-card-title>
+              <v-card-actions>
+                <span v-if="err.message" class="isDanger err"><v-icon small color="error">warning</v-icon>{{ err.message }}</span>
+                <v-spacer />
+                <v-btn
+                flat
+                ripple
+                @click="submit()"
+                :disabled="!deckValidate">
+                  submit
+                </v-btn>
+                <v-btn
+                flat
+                @click="reset()">
+                  reset
+                </v-btn>
+              </v-card-actions>
+              <v-card-text>
+                <template v-for="s in subheaders" v-if="haveContents(s)">
+                  <v-subheader>{{ s.title }}</v-subheader>
+                  <div v-for="(i, index) in deck.cards" v-if="s.value(i)" :key="index" class="pa-1 pl-4">
+                    {{ `${i.qty}x ` }}
+                    <card-popover :card="i.card" />
+                  </div>
+                </template>
+              </v-card-text>
+            </template>
+          </v-form>
         </v-card>
       </v-flex>
       <v-flex md6>
@@ -82,8 +97,15 @@ export default {
       },
       form: {
         name: '',
+        introduce: '',
         investigator_id: '',
         cards: [] // { card_id, qty, require }
+      },
+      rules: {
+        name: [
+          (v) => !!v || '덱 이름을 입력하세요.',
+          (v) => (v && v.length <= 20) || '덱 이름은 20자 이하입니다.'
+        ]
       },
       toggleBtn: {}
     }
@@ -122,6 +144,11 @@ export default {
       // overriding NOP
     },
     submit () {
+      if (!this.$refs.form.validate()) {
+        this.err.message = '양식을 모두 입력해주세요.'
+        return
+      }
+      this.err.message = ''
       const deck = this.deck.cards
       const cards = deck.map((i) => {
         return {

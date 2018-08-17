@@ -16,9 +16,11 @@
         <td>{{ cards.item.traits | traits }}</td>
         <td>{{ cards.item.pack_id.name, cards.item.number | cardNumber }}</td>
         <td>
-          <investigator-mod v-if="cards.item.type === $cfg.const.INVESTIGATOR" :card_id="cards.item._id" @card-moded="list()" />
-          <playercard-mod v-if="cards.item.type !== $cfg.const.INVESTIGATOR" :card_id="cards.item._id" @card-moded="list()" />
-          <card-del-btn :card_id="cards.item._id" @card-deleted="list()" />
+          <v-layout row>
+            <investigator-mod v-if="cards.item.type === $cfg.const.INVESTIGATOR" :card_id="cards.item._id" @card-moded="list()" />
+            <playercard-mod v-if="cards.item.type !== $cfg.const.INVESTIGATOR" :card_id="cards.item._id" @card-moded="list()" />
+            <card-del-btn :card_id="cards.item._id" @card-deleted="list()" />
+          </v-layout>
         </td>
       </template>
     </v-data-table>
@@ -96,6 +98,7 @@ export default {
         },
         {
           text: '편집',
+          align: 'center',
           sortable: false
         }
       ]
@@ -106,7 +109,7 @@ export default {
   },
   methods: {
     list () {
-      const q = {}
+      const q = { name: { $ne: 'Random Basic Weakness' } }
       const s = ''
       this.fetchList(this.path, q, s)
     }

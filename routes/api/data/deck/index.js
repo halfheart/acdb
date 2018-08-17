@@ -3,6 +3,7 @@ const ctrl = require('./ctrls');
 
 router.get('/', ctrl.list);
 router.get('/:_id', ctrl.deck);
+router.get('/read/:_id', ctrl.read);
 router.post('/', ctrl.add);
 router.put('/', ctrl.mod);
 router.delete('/', ctrl.del);

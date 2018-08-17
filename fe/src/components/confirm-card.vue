@@ -32,7 +32,7 @@ export default {
       this.$emit('click-confirm')
     },
     cancel () {
-      this.$emit('cick-cancel')
+      this.$emit('click-cancel')
     }
   }
 }

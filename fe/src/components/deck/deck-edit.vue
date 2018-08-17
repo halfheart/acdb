@@ -8,7 +8,9 @@ export default {
   },
   data () {
     return {
-
+      form: {
+        _id: ''
+      }
     }
   },
   methods: {
@@ -22,7 +24,12 @@ export default {
         const deck = res.data.deck
 
         this.deck.investigator = deck.investigator_id
-        this.form.investigator_id = deck.investigator_id._id
+        this.form = {
+          _id: deck._id,
+          name: deck.name,
+          introduce: deck.introduce,
+          investigator_id: deck.investigator_id._id
+        }
 
         const cards = deck.cards.map((i) => {
           return {
@@ -54,12 +61,7 @@ export default {
         }
       })
 
-      this.form = {
-        _id: this.deck_id,
-        name: '',
-        investigator_id: this.form.investigator_id,
-        cards: cards
-      }
+      this.form.cards = cards
 
       this.$axios.put(`${this.$cfg.path.api}data/deck`, this.form)
       .then((res) => {

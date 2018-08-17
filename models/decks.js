@@ -2,6 +2,8 @@ const mongoose = require('mongoose');
 
 const deckSchema = new mongoose.Schema({
   name: { type: String, index: true },
+  introduce: { type: String },
+  view_cnt: { type: Number, default: 0 },
   investigator_id: { type: mongoose.Schema.Types.ObjectId, ref: 'card', required: true },
   cards: [{
     card_id: { type: mongoose.Schema.Types.ObjectId, ref: 'card', required: true },

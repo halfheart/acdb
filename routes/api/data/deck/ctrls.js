@@ -49,6 +49,30 @@ exports.list = (req, res) => {
   });
 }
 
+exports.read = (req, res) => {
+  const query = { _id: req.params._id };
+
+  Deck.findOneAndUpdate(query, { $inc: { view_cnt: 1 } })
+  .then((r) => {
+    if (!r) throw new Error('deck not exists');
+    return Deck.findOne(query)
+      .populate('investigator_id')
+      .populate({
+        path: 'cards.card_id',
+        populate: {
+          path: 'pack_id',
+          select: 'name'
+        }
+      })
+  })
+  .then((r) => {
+    res.send({ success: true, deck: r });
+  })
+  .catch((err) => {
+    res.send({ success: false, msg: err.message });
+  })
+}
+
 exports.deck = (req, res) => {
   const query = { _id: req.params._id };
 

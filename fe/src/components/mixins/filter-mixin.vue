@@ -32,6 +32,7 @@ export default {
       return `${p} #${n}`
     },
     flavor: function (str = '', len = 100) {
+      if (!str) return ''
       return `${str.substring(0, len)}...`
     }
   },

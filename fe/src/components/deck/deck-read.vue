@@ -1,19 +1,15 @@
 <template>
-  <v-container fluid grid-list-md>
+  <v-container grid-list-md class="__content">
     <v-layout row wrap>
       <v-flex md6>
         <v-card>
           <now-loading :show="pending" />
           <template v-if="!pending">
-            <v-card-title>
-              <v-layout column>
-                <div>
-                  {{ `${invName} Deck. (${deckSize}/${deckLimit})`}}
-                </div>
-                <div v-if="requiredXp > 0">
-                  {{ `XP required: ${requiredXp}`}}
-                </div>
-              </v-layout>
+            <v-card-title primary-title>
+              <span class="mr-2 ml-2" v-html="factionIcon(deck.investigator_id.faction, false)"></span>
+              <h3 class="headline mb-0">{{ deck.name }}</h3>
+              <div class="__divider"></div>
+              <v-icon small class="mr-2">visibility</v-icon>{{ deck.view_cnt }}
             </v-card-title>
             <v-card-actions>
               <v-btn flat icon @click="mod()">
@@ -21,7 +17,7 @@
               </v-btn>
               <deck-del-btn :deck_id="deck_id" />
             </v-card-actions>
-            <v-card-text>
+            <v-card-text class="__decklist">
               <template v-for="s in subheaders" v-if="haveContents(s)">
                 <v-subheader>{{ s.title }}</v-subheader>
                 <div v-for="(i, index) in deck.cards" v-if="s.value(i)" :key="index" class="pa-1 pl-4">
@@ -39,6 +35,18 @@
     </v-layout>
   </v-container>
 </template>
+
+<style>
+.__decklist {
+  column-count: 2;
+}
+.__divider {
+  margin-top: 4px;
+  margin-bottom: 4px;
+  border-top: solid 1px #999999;
+  width: 100%;
+}
+</style>
 
 <style>
 .isDanger {
@@ -69,8 +77,13 @@ export default {
     return {
       pending: true,
       deck: {
-        investigator: {},
-        cards: []
+        name: '',
+        introduce: '',
+        view_cnt: '',
+        investigator_id: '',
+        cards: [],
+        ut: '',
+        cmt_ids: []
       },
       subheaders: [
         {
@@ -106,13 +119,13 @@ export default {
     },
     invName: function () {
       if (this.pending === true) return ''
-      const inv = this.deck.investigator
+      const inv = this.deck.investigator_id
 
       return inv.name
     },
     deckLimit: function () {
       if (this.pending === true) return 30
-      const inv = this.deck.investigator
+      const inv = this.deck.investigator_id
 
       return inv.deckSize
     },
@@ -133,15 +146,15 @@ export default {
   },
   methods: {
     mod () {
-      this.$router.push({ name: 'deckEdit', query: { deck_id: this.deck_id, investigator_id: this.deck.investigator._id } })
+      this.$router.push({ name: 'deckEdit', query: { deck_id: this.deck_id } })
     },
     fetchDeck () {
-      this.$axios.get(`${this.$cfg.path.api}data/deck/${this.deck_id}`)
+      this.$axios.get(`${this.$cfg.path.api}data/deck/read/${this.deck_id}`)
       .then((res) => {
         if (!res.data.success) throw new Error(res.data.msg)
         const deck = res.data.deck
 
-        this.deck.investigator = deck.investigator_id
+        this.deck = deck
 
         const cards = deck.cards.map((i) => {
           return {
