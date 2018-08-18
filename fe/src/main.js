@@ -9,27 +9,37 @@ import 'vuetify/dist/vuetify.min.css'
 import cfg from '../static/cfg'
 
 import axios from 'axios'
-import cookie from 'vue-cookie'
+import auth from './auth/auth-helper'
 
 Vue.use(Vuetify)
 
 Vue.config.productionTip = false
 Vue.prototype.$axios = axios
 Vue.prototype.$cfg = cfg
+Vue.prototype.$auth = auth
 
-const token = cookie.get('token')
-if (token) axios.defaults.headers.common.Authorization = cookie.get('token')
+axios.interceptors.request.use((config) => {
+  const token = auth.getUserInfo().token
+  config.headers.Authorization = token
+  return config
+}, (err) => {
+  return Promise.reject(err)
+})
+
 axios.interceptors.response.use((res) => {
-  if (res.data.token) cookie.set('token', res.data.token, { expires: '2m' })
-  axios.defaults.headers.common.Authorization = cookie.get('token')
+  const rtk = res.headers['www-authenticate']
+  if (rtk) {
+    axios.defaults.headers.common.Authorization = auth.getUserInfo().token
+  }
+  const userinfo = res.data.userinfo
+  if (userinfo) {
+    const _id = userinfo._id
+    const username = userinfo.username
+    const email = userinfo.email
+    auth.setUserInfo(rtk, _id, username, email)
+  }
   return Promise.resolve(res)
 }, (err) => {
-  /*
-  if (err.response.status === '401') {
-    Vue.router.push({ name: 'deckList' })
-    return
-  }
-  */
   return Promise.reject(err)
 })
 

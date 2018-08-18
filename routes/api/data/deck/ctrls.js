@@ -38,7 +38,8 @@ exports.list = (req, res) => {
       .skip(skip)
       .limit(limit)
       .sort(s)
-      .populate('investigator_id');
+      .populate('investigator_id')
+      .populate('_author');
   })
   .then((r) => {
     d.ds = r
@@ -57,6 +58,7 @@ exports.read = (req, res) => {
     if (!r) throw new Error('deck not exists');
     return Deck.findOne(query)
       .populate('investigator_id')
+      .populate('_author')
       .populate({
         path: 'cards.card_id',
         populate: {
@@ -78,6 +80,7 @@ exports.deck = (req, res) => {
 
   Deck.findOne(query)
   .populate('investigator_id')
+  .populate('_author')
   .populate({
     path: 'cards.card_id',
     populate: {

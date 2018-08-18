@@ -3,6 +3,9 @@ module.exports = {
     api: 'http://localhost:3000/api/',
     web: 'http://localhost:8080/#/'
   },
+  cookie: {
+    expiresIn: '30m'
+  },
   const: {
     FACTIONS: ['Neutral', 'Survivor', 'Guardian', 'Mystic', 'Seeker', 'Rogue'],
     TRAITS: ['Item', 'Tactic', 'Weapon', 'Relic'],

@@ -14,7 +14,11 @@ if (!cfg) {
 
 var app = express();
 
-if (cfg.web.cors) app.use(require('cors')());
+if (cfg.web.cors) {
+  app.use(require('cors')({
+    exposedHeaders: ['WWW-Authenticate', 'Etag'],
+  }));
+};
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

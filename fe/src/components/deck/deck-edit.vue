@@ -23,7 +23,7 @@ export default {
         if (!res.data.success) throw new Error(res.data.msg)
         const deck = res.data.deck
 
-        this.deck.investigator = deck.investigator_id
+        this.deck.investigator_id = deck.investigator_id
         this.form = {
           _id: deck._id,
           name: deck.name,

@@ -10,7 +10,7 @@
         <v-flex>
           <h2 class="intro_title mt-2 mb-3">최근 덱 리스트</h2>
           <h3 class="intro_title mb-3">Recent Decks</h3>
-          <deck-list :limit="6" />
+          <deck-list :limit="3" />
         </v-flex>
       </v-layout>
     </v-container>

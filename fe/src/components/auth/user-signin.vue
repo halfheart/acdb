@@ -69,8 +69,10 @@ export default {
         .then((res) => {
           if (!res.data.success) throw new Error(res.data.msg)
           this.err.message = ''
-          console.log('로그인됨', res.data.token)
+          console.log('로그인됨')
           this.show = false
+          location.reload()
+          this.$emit('isLoggedin')
         })
         .catch((err) => {
           this.err.message = err.message

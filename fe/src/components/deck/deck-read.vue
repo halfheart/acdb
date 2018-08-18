@@ -1,23 +1,31 @@
 <template>
-  <v-container grid-list-md class="__content">
-    <v-layout row wrap>
-      <v-flex md6>
-        <v-card>
-          <now-loading :show="pending" />
-          <template v-if="!pending">
-            <v-card-title primary-title>
-              <span class="mr-2 ml-2" v-html="factionIcon(deck.investigator_id.faction, false)"></span>
-              <h3 class="headline mb-0">{{ deck.name }}</h3>
-              <div class="__divider"></div>
-              <v-icon small class="mr-2">visibility</v-icon>{{ deck.view_cnt }}
-            </v-card-title>
-            <v-card-actions>
-              <v-btn flat icon @click="mod()">
-                <v-icon>edit</v-icon>
-              </v-btn>
+  <v-layout row wrap>
+    <v-flex md6>
+      <v-card height="100%">
+        <now-loading :show="pending" />
+        <template v-if="!pending">
+          <v-card-title primary-title>
+            <span class="mr-2 pl-3" v-html="factionIcon(deck.investigator_id.faction, false)"></span>
+            <h3 class="headline mb-0">{{ deck.name }}</h3>
+            <v-spacer />
+            <v-btn flat icon :to="'/deck/list'"><v-icon>close</v-icon></v-btn>
+          </v-card-title>
+          <v-divider />
+          <v-card-title>
+            <v-layout justify-space-between class="pl-3">
+              <v-flex>{{ `${deck._author.username}` }}</v-flex>
+              <v-flex><v-icon small class="mr-2" title="조회수">visibility</v-icon>{{ deck.view_cnt }}</v-flex>
+              <v-flex><v-icon small class="mr-2" title="댓글 수">chat_bubble</v-icon>{{ deck.cmt_ids.length }}</v-flex>
+              <v-flex><v-icon small class="mr-2" title="좋아요 수">favorite</v-icon>{{ deck._fav.length }}</v-flex>
+            </v-layout>
+            <v-spacer />
+            <template v-if="this.$auth.isLoggedin() && this.$auth.getUserInfo()._id === deck._author._id">
+              <v-btn small flat icon @click="mod()"><v-icon>edit</v-icon></v-btn>
               <deck-del-btn :deck_id="deck_id" />
-            </v-card-actions>
-            <v-card-text class="__decklist">
+            </template>
+          </v-card-title>
+          <v-card-text>
+            <div class="__decklist">
               <template v-for="s in subheaders" v-if="haveContents(s)">
                 <v-subheader>{{ s.title }}</v-subheader>
                 <div v-for="(i, index) in deck.cards" v-if="s.value(i)" :key="index" class="pa-1 pl-4">
@@ -25,15 +33,19 @@
                   <card-popover :card="i.card" />
                 </div>
               </template>
-            </v-card-text>
-          </template>
-        </v-card>
-      </v-flex>
-      <v-flex md6>
-
-      </v-flex>
-    </v-layout>
-  </v-container>
+            </div>
+          </v-card-text>
+          <v-divider />
+          <v-card-text>
+            {{ deck.introduce }}
+          </v-card-text>
+        </template>
+      </v-card>
+    </v-flex>
+    <v-flex md6>
+      <deck-comments v-if="!pending" :target_id="deck._id" :cmt_ids="deck.cmt_ids" />
+    </v-flex>
+  </v-layout>
 </template>
 
 <style>
@@ -57,6 +69,7 @@
 <script>
 import filterMixin from '@/components/mixins/filter-mixin'
 
+import deckComments from '@/components/deck/deck-comments'
 import nowLoading from '@/components/now-loading'
 import cardPopover from '@/components/card/card-popover'
 import deckDelBtn from '@/components/deck/deck-del-btn'
@@ -68,10 +81,16 @@ export default {
   props: {
     deck_id: { type: String, default: '' }
   },
+  watch: {
+    deck_id () {
+      this.fetchDeck()
+    }
+  },
   components: {
     nowLoading,
     cardPopover,
-    deckDelBtn
+    deckDelBtn,
+    deckComments
   },
   data () {
     return {
@@ -149,6 +168,7 @@ export default {
       this.$router.push({ name: 'deckEdit', query: { deck_id: this.deck_id } })
     },
     fetchDeck () {
+      // this.pending = true
       this.$axios.get(`${this.$cfg.path.api}data/deck/read/${this.deck_id}`)
       .then((res) => {
         if (!res.data.success) throw new Error(res.data.msg)
@@ -166,6 +186,7 @@ export default {
 
         this.deck.cards = cards
         this.pending = false
+        window.scrollTo(0, 0)
       })
       .catch((err) => {
         console.log(err.message)
@@ -178,6 +199,15 @@ export default {
         if (obj.value(i)) result = true
       })
       return result
+    },
+    deckTotal (cards) {
+      let qty = 0
+
+      cards.forEach((i) => {
+        qty += i.qty
+      })
+
+      return qty
     }
   }
 }

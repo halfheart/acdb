@@ -33,6 +33,7 @@ export default {
     },
     flavor: function (str = '', len = 100) {
       if (!str) return ''
+      if (str.length <= len) return str
       return `${str.substring(0, len)}...`
     }
   },

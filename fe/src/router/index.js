@@ -1,10 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import index from '@/components/index'
 import intro from '@/components/intro'
 import packList from '@/components/pack/pack-list'
 import cardList from '@/components/card/card-list'
+import deckIndex from '@/components/deck/index'
 import deckList from '@/components/deck/deck-list'
 import deckNew from '@/components/deck/deck-new'
 import deckRead from '@/components/deck/deck-read'
@@ -17,43 +17,35 @@ export default new Router({
   routes: [
     {
       path: '/',
-      component: index,
+      name: 'intro',
+      component: intro
+    },
+    {
+      path: '/deck',
+      component: deckIndex,
       children: [
         {
-          path: '',
-          name: 'intro',
-          component: intro
-        },
-        {
-          path: '/pack/list',
-          name: 'packList',
-          component: packList
-        },
-        {
-          path: '/card/list',
-          name: 'cardList',
-          component: cardList
-        },
-        {
-          path: '/deck/list',
+          path: 'list',
           name: 'deckList',
-          component: deckList
+          component: deckList,
+          children: [
+            {
+              path: 'read',
+              name: 'deckRead',
+              component: deckRead,
+              props: (route) => ({
+                deck_id: route.query.deck_id
+              })
+            }
+          ]
         },
         {
-          path: '/deck/new',
+          path: 'new',
           name: 'deckNew',
           component: deckNew
         },
         {
-          path: '/deck/read',
-          name: 'deckRead',
-          component: deckRead,
-          props: (route) => ({
-            deck_id: route.query.deck_id
-          })
-        },
-        {
-          path: '/deck/edit',
+          path: 'edit',
           name: 'deckEdit',
           component: deckEdit,
           props: (route) => ({
@@ -61,7 +53,7 @@ export default new Router({
           })
         },
         {
-          path: '/deck/new/builder',
+          path: 'new/builder',
           name: 'deckBuilder',
           component: deckBuilder,
           props: (route) => ({
@@ -69,6 +61,16 @@ export default new Router({
           })
         }
       ]
+    },
+    {
+      path: '/pack/list',
+      name: 'packList',
+      component: packList
+    },
+    {
+      path: '/card/list',
+      name: 'cardList',
+      component: cardList
     }
   ]
 })

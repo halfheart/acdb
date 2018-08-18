@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 
 const deckSchema = new mongoose.Schema({
   name: { type: String, index: true },
+  _author: { type: mongoose.Schema.Types.ObjectId, ref: 'user', required: true },
   introduce: { type: String },
   view_cnt: { type: Number, default: 0 },
   investigator_id: { type: mongoose.Schema.Types.ObjectId, ref: 'card', required: true },
@@ -11,7 +12,8 @@ const deckSchema = new mongoose.Schema({
     required: { type: Boolean, default: false }
   }],
   ut: { type: Date, default: Date.now },
-  cmt_ids: [{ type: mongoose.Schema.Types.ObjectId, ref: 'comment' }]
+  cmt_ids: [{ type: mongoose.Schema.Types.ObjectId, ref: 'comment' }],
+  _fav: [{ type: mongoose.Schema.Types.ObjectId, ref: 'user' }]
 });
 
 const Deck = mongoose.model('deck', deckSchema);

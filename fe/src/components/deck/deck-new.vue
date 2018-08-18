@@ -4,7 +4,7 @@
       <now-loading :show="pending" />
       <template v-show="!pending">
         <v-flex v-for="(i, index) in d.ds" :key="index" md4>
-          <v-card>
+          <v-card height="100%">
             <v-card-media
             :src="imgPath(i._id)"
             height="150">

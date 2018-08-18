@@ -34,6 +34,7 @@ export default {
   },
   methods: {
     fetchList (path = '', query = {}, select = '') {
+      this.pending = true
       this.$axios.get(`${this.$cfg.path.api}${path}`, {
         params: {
           draw: this.d.draw + 1,

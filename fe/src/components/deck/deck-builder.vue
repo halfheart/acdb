@@ -97,6 +97,7 @@ export default {
       },
       form: {
         name: '',
+        _author: '',
         introduce: '',
         investigator_id: '',
         cards: [] // { card_id, qty, require }
@@ -159,6 +160,7 @@ export default {
       })
 
       this.form.cards = cards
+      this.form._author = this.$auth.getUserInfo()._id
 
       this.$axios.post(`${this.$cfg.path.api}data/deck`, this.form)
       .then((res) => {
@@ -190,7 +192,7 @@ export default {
       .then((res) => {
         if (!res.data.success) throw new Error(res.data.msg)
         const inv = res.data.card
-        this.deck.investigator = inv
+        this.deck.investigator_id = inv
         this.form.investigator_id = inv._id
 
         const query = { _id: { $in: inv.deckReq_ids } }

@@ -2,6 +2,7 @@
   <v-dialog v-model="show">
     <v-btn
     flat
+    small
     icon
     slot="activator">
       <v-icon>delete</v-icon>
