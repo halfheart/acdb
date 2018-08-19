@@ -77,14 +77,45 @@ exports.add = (req, res) => {
   .catch((err) => {
     res.send({ success: false, msg: err.message });
   });
-
-
 }
 
 exports.mod = (req, res) => {
-  res.send({ success: false, msg: 'comment mod 준비중' });
+  const set = req.body;
+
+  if (set._id === undefined) res.send({ success: false, msg: 'params err _id' });
+
+  const f = { _id: set._id };
+  const s = { $set: set };
+  Comment.findOneAndUpdate(f, s)
+  .then(() => {
+    res.send({ success: true });
+  })
+  .catch((err) => {
+    res.send({ success: false, msg: err.message });
+  })
 }
 
 exports.del = (req, res) => {
-  res.send({ success: false, msg: 'comment del 준비중' });
+  const { _id } = req.query;
+
+  if (_id === undefined) res.send({ success: false, msg: 'params err _id' });
+
+  const f = { _id };
+  let _target = undefined;
+
+  Comment.findOne(f)
+  .then((r) => {
+    if (!r) throw new Error('Comment not exists');
+    _target = r._target;
+    return Comment.remove(f);
+  })
+  .then(() => {
+    return Deck.findOneAndUpdate({ _id: _target }, { $pull: { cmt_ids: _id } });
+  })
+  .then(() => {
+    res.send({ success: true });
+  })
+  .catch((err) => {
+    res.send({ success: false, msg: err.message });
+  });
 }

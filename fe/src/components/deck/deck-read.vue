@@ -43,7 +43,7 @@
       </v-card>
     </v-flex>
     <v-flex md6>
-      <deck-comments v-if="!pending" :target_id="deck._id" :cmt_ids="deck.cmt_ids" />
+      <comment-list ref="comments" @list="fetchComments()" :target_id="deck_id" :comments="comments.d.ds" />
     </v-flex>
   </v-layout>
 </template>
@@ -69,7 +69,7 @@
 <script>
 import filterMixin from '@/components/mixins/filter-mixin'
 
-import deckComments from '@/components/deck/deck-comments'
+import commentList from '@/components/deck/comment/comment-list'
 import nowLoading from '@/components/now-loading'
 import cardPopover from '@/components/card/card-popover'
 import deckDelBtn from '@/components/deck/deck-del-btn'
@@ -81,21 +81,24 @@ export default {
   props: {
     deck_id: { type: String, default: '' }
   },
-  watch: {
-    deck_id () {
-      this.fetchDeck()
-    }
-  },
   components: {
     nowLoading,
     cardPopover,
     deckDelBtn,
-    deckComments
+    commentList
   },
   data () {
     return {
       pending: true,
+      comments: {
+        d: {
+          draw: 0,
+          cnt: 0,
+          ds: []
+        }
+      },
       deck: {
+        _id: this.deck_id,
         name: '',
         introduce: '',
         view_cnt: '',
@@ -160,15 +163,44 @@ export default {
       return result
     }
   },
+  watch: {
+    deck_id () {
+      this.fetchDeck()
+      this.fetchComments()
+    }
+  },
   created () {
     this.fetchDeck()
+    this.fetchComments()
   },
   methods: {
     mod () {
       this.$router.push({ name: 'deckEdit', query: { deck_id: this.deck_id } })
     },
+    fetchComments () {
+      const query = { _target: this.deck_id }
+      const select = ''
+      this.$axios.get(`${this.$cfg.path.api}data/deck/comment`, {
+        params: {
+          draw: this.comments.d.draw + 1,
+          limit: 0,
+          skip: 0,
+          sort: 1,
+          order: '_id',
+          query: query,
+          select: select
+        }
+      })
+      .then((res) => {
+        if (!res.data.success) throw new Error(res.data.msg)
+        this.comments.d = res.data.d
+      })
+      .catch((err) => {
+        console.log(err.message)
+      })
+    },
     fetchDeck () {
-      // this.pending = true
+      this.pending = true
       this.$axios.get(`${this.$cfg.path.api}data/deck/read/${this.deck_id}`)
       .then((res) => {
         if (!res.data.success) throw new Error(res.data.msg)
