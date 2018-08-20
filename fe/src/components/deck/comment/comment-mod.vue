@@ -3,6 +3,7 @@
   <v-layout row>
     <v-textarea
     box
+    auto-grow
     append-icon="close"
     @click:append="close()"
     v-model="form.content"
@@ -10,12 +11,10 @@
     counter="300"
     >
     </v-textarea>
-    <v-btn flat @click="submit()">
-      등록
-    </v-btn>
   </v-layout>
   </v-form>
 </template>
+
 <script>
 import commentAdd from './comment-add'
 export default {

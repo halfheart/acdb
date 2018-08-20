@@ -82,6 +82,10 @@ export default {
         {
           title: '덱 리스트',
           to: '/deck/list'
+        },
+        {
+          title: '카드 목록',
+          to: '/card/list'
         }
       ],
       title: '아컴DB',

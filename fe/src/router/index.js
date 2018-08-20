@@ -3,6 +3,7 @@ import Router from 'vue-router'
 
 import intro from '@/components/intro'
 import packList from '@/components/pack/pack-list'
+import cardIndex from '@/components/card/index'
 import cardList from '@/components/card/card-list'
 import deckIndex from '@/components/deck/index'
 import deckList from '@/components/deck/deck-list'
@@ -19,6 +20,17 @@ export default new Router({
       path: '/',
       name: 'intro',
       component: intro
+    },
+    {
+      path: '/card',
+      component: cardIndex,
+      children: [
+        {
+          path: 'list',
+          name: 'cardList',
+          component: cardList
+        }
+      ]
     },
     {
       path: '/deck',
@@ -66,11 +78,6 @@ export default new Router({
       path: '/pack/list',
       name: 'packList',
       component: packList
-    },
-    {
-      path: '/card/list',
-      name: 'cardList',
-      component: cardList
     }
   ]
 })

@@ -9,28 +9,32 @@
         <template v-if="!pending && d.cnt > 0">
           <v-flex v-for="(i, index) in d.ds" :key="index" md4 xs12>
             <v-card
+             height="100%"
             :to="'/deck/list/read?deck_id='+i._id">
               <v-card-media
               :src="imgPath(i.investigator_id._id)"
               height="150">
               </v-card-media>
-              <v-card-title primary-title>
+              <v-card-title primary-title :class="$style.introduce">
                 <div>
                   <div class="headline">{{ i.name | flavor(15) }}</div>
                   <div class="mt-3">{{ i.introduce | flavor(50) }}</div>
                 </div>
               </v-card-title>
-              <v-card-title>
-                <v-layout justify-space-between>
-                  <span>{{ `작성자: ${i._author.username}` }}</span>
-                  <span>{{ `${i.investigator_id.name} 덱` }}</span>
+              <v-card-text>
+                <v-layout>
+                  {{ `${i._author.username}` }}
+                  <v-spacer />
+                  <card-popover :card="i.investigator_id" />덱
                 </v-layout>
-              </v-card-title>
+              </v-card-text>
               <v-divider />
-              <v-card-text class="text-md-right">
-                <span class="mr-3"><v-icon small class="mr-2" title="조회수">visibility</v-icon>{{ i.view_cnt }}</span>
-                <span class="mr-3"><v-icon small class="mr-2" title="댓글 수">chat_bubble</v-icon>{{ i.cmt_ids.length }}</span>
-                <span><v-icon small class="mr-2" title="좋아요 수">favorite</v-icon>{{ i._fav.length }}</span>
+              <v-card-text>
+                <content-info
+                :date="$mong.getDate(i._id)"
+                :view_cnt="i.view_cnt"
+                :cmt_cnt="i.cmt_ids.length"
+                :fav_cnt="i._fav.length" />
               </v-card-text>
             </v-card>
           </v-flex>
@@ -43,11 +47,20 @@
   </v-layout>
 </template>
 
+<style module>
+.introduce {
+  min-height: 130px;
+  align-items: start;
+}
+</style>
+
 <script>
 import listMixin from '@/components/mixins/list-mixin'
 import filterMixin from '@/components/mixins/filter-mixin'
 
 import nowLoading from '@/components/now-loading'
+import contentInfo from '@/components/content-info'
+import cardPopover from '@/components/card/card-popover'
 
 export default {
   mixins: [
@@ -55,7 +68,9 @@ export default {
     filterMixin
   ],
   components: {
-    nowLoading
+    nowLoading,
+    contentInfo,
+    cardPopover
   },
   props: {
     limit: { type: Number, default: 0 }

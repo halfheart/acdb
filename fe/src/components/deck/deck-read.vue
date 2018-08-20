@@ -5,25 +5,26 @@
         <now-loading :show="pending" />
         <template v-if="!pending">
           <v-card-title primary-title>
-            <span class="mr-2 pl-3" v-html="factionIcon(deck.investigator_id.faction, false)"></span>
-            <h3 class="headline mb-0">{{ deck.name }}</h3>
-            <v-spacer />
-            <v-btn flat icon :to="'/deck/list'"><v-icon>close</v-icon></v-btn>
+            <v-layout align-center class="mb-0">
+              <span class="mr-2 pl-3" v-html="factionIcon(deck.investigator_id.faction, false)"></span>
+              <h3 class="headline pb-0">{{ deck.name }}</h3>
+              <v-spacer />
+              <v-btn flat icon @click="$router.push({ name: 'deckList' })"><v-icon>close</v-icon></v-btn>
+            </v-layout>
           </v-card-title>
           <v-divider />
           <v-card-title>
-            <v-layout justify-space-between class="pl-3">
-              <v-flex>{{ `${deck._author.username}` }}</v-flex>
-              <v-flex><v-icon small class="mr-2" title="조회수">visibility</v-icon>{{ deck.view_cnt }}</v-flex>
-              <v-flex><v-icon small class="mr-2" title="댓글 수">chat_bubble</v-icon>{{ deck.cmt_ids.length }}</v-flex>
-              <v-flex><v-icon small class="mr-2" title="좋아요 수">favorite</v-icon>{{ deck._fav.length }}</v-flex>
-            </v-layout>
-            <v-spacer />
-            <template v-if="this.$auth.isLoggedin() && this.$auth.getUserInfo()._id === deck._author._id">
-              <v-btn small flat icon @click="mod()"><v-icon>edit</v-icon></v-btn>
-              <deck-del-btn :deck_id="deck_id" />
-            </template>
+            <div class="pl-3 hidden-xs-only"></div>
+            <div>{{ deck._author.username }}</div>
+            <content-info
+            :date="$mong.getDate(deck._id)"
+            :view_cnt="deck.view_cnt"
+            :cmt_cnt="deck.cmt_ids.length"
+            :fav_cnt="deck._fav.length"
+            />
+            <div class="pr-4 hidden-xs-only"></div>
           </v-card-title>
+          <v-divider />
           <v-card-text>
             <div class="__decklist">
               <template v-for="s in subheaders" v-if="haveContents(s)">
@@ -35,6 +36,15 @@
               </template>
             </div>
           </v-card-text>
+          <template v-if="this.$auth.isLoggedin() && this.$auth.getUserInfo()._id === deck._author._id">
+            <v-divider />
+            <v-card-actions>
+              <v-spacer />
+              <v-btn class="mr-3" small flat icon @click="mod()"><v-icon>edit</v-icon></v-btn>
+              <deck-del-btn :deck_id="deck_id" />
+            </v-card-actions>
+            <div class="pr-4 hidden-xs-only"></div>
+          </template>
           <v-divider />
           <v-card-text>
             {{ deck.introduce }}
@@ -69,6 +79,7 @@
 <script>
 import filterMixin from '@/components/mixins/filter-mixin'
 
+import contentInfo from '@/components/content-info'
 import commentList from '@/components/deck/comment/comment-list'
 import nowLoading from '@/components/now-loading'
 import cardPopover from '@/components/card/card-popover'
@@ -85,7 +96,8 @@ export default {
     nowLoading,
     cardPopover,
     deckDelBtn,
-    commentList
+    commentList,
+    contentInfo
   },
   data () {
     return {

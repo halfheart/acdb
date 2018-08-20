@@ -3,6 +3,7 @@
   <v-layout row>
     <v-textarea
     box
+    auto-grow
     v-model="form.content"
     :rules="rules.content"
     counter="300">
@@ -13,6 +14,12 @@
   </v-layout>
   </v-form>
 </template>
+
+<style>
+textarea {
+  margin-top: 0 !important;
+}
+</style>
 
 <script>
 export default {

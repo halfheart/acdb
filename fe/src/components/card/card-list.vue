@@ -24,10 +24,20 @@
         </td>
       </template>
     </v-data-table>
-    <v-pagination
-    @input="list()"
-    :length="getTotalPage"
-    v-model="p.page" />
+    <v-layout row wrap align-center justify-space-between>
+      <v-pagination
+      @input="list()"
+      :length="getTotalPage"
+      v-if="getTotalPage"
+      v-model="p.page" />
+      <v-spacer />
+      <v-select
+      v-model="p.limit"
+      :items="items.limit"
+      @change="list()"
+      >
+      </v-select>
+    </v-layout>
     <card-add-fab @card-added="list()" />
   </div>
 </template>
@@ -60,6 +70,22 @@ export default {
         limit: 20,
         sort: 1,
         order: 'number'
+      },
+      items: {
+        limit: [
+          {
+            text: '모두 보기',
+            value: 0
+          },
+          {
+            text: '20개씩 보기',
+            value: 20
+          },
+          {
+            text: '50개씩 보기',
+            value: 50
+          }
+        ]
       },
       path: 'data/card',
       headers: [

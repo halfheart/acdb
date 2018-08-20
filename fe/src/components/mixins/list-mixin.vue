@@ -28,7 +28,7 @@ export default {
       return limit * (page - 1)
     },
     getTotalPage () {
-      if (this.d.cnt === 0) return 0
+      if (this.d.cnt === 0 || this.p.limit === 0) return 0
       return Math.ceil(this.d.cnt / this.p.limit)
     }
   },

@@ -18,7 +18,7 @@
           </div>
         </v-layout>
       </template>
-      <comment-add @list="list()" :target_id="target_id" />
+      <comment-add v-if="this.$auth.isLoggedin()" @list="list()" :target_id="target_id" />
     </v-container>
   </v-card>
 </template>

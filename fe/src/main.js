@@ -10,6 +10,10 @@ import cfg from '../static/cfg'
 
 import axios from 'axios'
 import auth from './auth/auth-helper'
+import mong from './helper/mongodb-helper'
+import moment from 'moment'
+
+moment.locale('ko')
 
 Vue.use(Vuetify)
 
@@ -17,6 +21,8 @@ Vue.config.productionTip = false
 Vue.prototype.$axios = axios
 Vue.prototype.$cfg = cfg
 Vue.prototype.$auth = auth
+Vue.prototype.$mong = mong
+Vue.prototype.$moment = moment
 
 axios.interceptors.request.use((config) => {
   const token = auth.getUserInfo().token

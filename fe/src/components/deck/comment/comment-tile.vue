@@ -1,19 +1,22 @@
 <template>
   <div>
-    <v-layout class="mb-2" row justify-space-between>
+    <v-layout justify-space-between class="mb-2">
       <div class="user-name">{{ author.username }}</div>
       <div v-if="$auth.isLoggedin && $auth.getUserInfo()._id === author._id">
-        <a class="mr-3" @click="mod = true">수정</a>
+        <a class="mr-3" @click="edit()">수정</a>
         <comment-del @comment-deleted="list()" :comment_id="comment_id" />
       </div>
     </v-layout>
-      <div class="mb-2" v-if="!mod">{{ content }}</div>
-      <comment-mod
-      v-if="mod"
-      @close="mod = !mod"
-      @list="list()"
-      :comment_id="comment_id"
-      :content="content" />
+    <v-layout v-if="!mod">
+      <div class="mb-2">{{ content }}</div>
+    </v-layout>
+    <comment-mod
+    ref="modform"
+    v-if="mod && $auth.isLoggedin && $auth.getUserInfo()._id === author._id"
+    @close="mod = false"
+    @list="list()"
+    :comment_id="comment_id"
+    :content="content" />
     <v-divider class="mb-2" />
   </div>
 </template>
@@ -52,6 +55,10 @@ export default {
   methods: {
     list () {
       this.$emit('list')
+    },
+    edit () {
+      if (!this.mod) this.mod = true
+      else this.$refs.modform.submit()
     }
   }
 }
